@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,15 +37,33 @@ namespace ForWinQuant
         }
 
 
-        /// <summary>  
-        /// DateTime时间格式转换为Unix时间戳格式  
-        /// </summary>  
-        /// <param name="time"> DateTime时间格式</param>  
-        /// <returns>Unix时间戳格式</returns>  
-        public static int ConvertDateTimeInt(System.DateTime time)
+        /// <summary>
+        /// 获取当前时间戳
+        /// </summary>
+        /// <returns></returns>
+        public static long GetTimeStamp()
         {
-            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
-            return (int)(time - startTime).TotalSeconds;
+            return new DateTimeOffset(DateTime.UtcNow).ToUnixTimeMilliseconds();
+        }
+
+        public static String Sha1Sign(String content, Encoding encode = null)
+        {
+            if (encode == null)
+                encode = Encoding.Default;
+            try
+            {
+                SHA1 sha1 = new SHA1CryptoServiceProvider();
+                byte[] bytes_in = encode.GetBytes(content);
+                byte[] bytes_out = sha1.ComputeHash(bytes_in);
+                sha1.Dispose();
+                String result = BitConverter.ToString(bytes_out);
+                result = result.Replace("-", "").ToUpper();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }

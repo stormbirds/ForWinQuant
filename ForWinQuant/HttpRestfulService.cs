@@ -88,7 +88,9 @@ namespace ForWinQuant
                 else
                     basestring.Append(sortedParams.ToList()[i].Key).Append("=").Append(sortedParams.ToList()[i].Value);
             }
+            basestring.Append("&secret_key=").Append(API_SECRET);
             string result = basestring.ToString();
+            result = Utils.Sha1Sign(result);
             return result;
         }
         
@@ -105,8 +107,9 @@ namespace ForWinQuant
             }
             Dictionary<string, object> pairs = new Dictionary<string, object>();
 
+            var oriQuery = request.RequestUri.Query;
 
-            request.RequestUri = new Uri(request.RequestUri.ToString() + "&sign=");
+            request.RequestUri = new Uri(request.RequestUri.ToString() + "&sign=" + HttpRestfulService.getSign(oriQuery));
             var response = await base.SendAsync(request, cancellationToken);
             var message = await HttpRestfulService.HandleHttpIO(request, response);
             return message;
