@@ -34,6 +34,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ForWinQuant.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -151,9 +157,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartHelper.cs" />
-    <Compile Include="HttpRestfulService.cs" />
-    <Compile Include="IMembersApi.cs" />
+    <Compile Include="Helper\ChartHelper.cs" />
+    <Compile Include="Restful\HttpRestfulService.cs" />
+    <Compile Include="Restful\IBaseApi.cs" />
+    <Compile Include="Restful\IMarketApi.cs" />
+    <Compile Include="Restful\IMembersApi.cs" />
+    <Compile Include="Restful\IOrdersApi.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,9 +179,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuantAuth.cs" />
-    <Compile Include="Restful.cs" />
-    <Compile Include="UserBalances.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="Restful\Restful.cs" />
+    <Compile Include="Helper\Utils.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +195,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -201,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Refit.5.1.67\build\net461\refit.targets" Condition="Exists('..\packages\Refit.5.1.67\build\net461\refit.targets')" />

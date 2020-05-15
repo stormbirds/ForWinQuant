@@ -20,17 +20,18 @@ namespace ForWinQuant
         public MainForm()
         {
             InitializeComponent();
-            Uri uri = new Uri("https://api6c9jg3nfw1s1js.eunex.co/v2/members/user-balances?api_id=KqtRQAwWjlqEnS8v&timestamp=1589449384996");
+            
             getUserBalances("KqtRQAwWjlqEnS8v");
         }
 
         private async void getUserBalances(string api_id)
         {
-            var api = RestService.For<IMembersApi>("https://api6c9jg3nfw1s1js.eunex.co/v2/member");
+            
+            var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
             try
             {
-                var octocat = await api.GetUserBalances("KqtRQAwWjlqEnS8v", Utils.GetTimeStamp().ToString());
-                label5.Text = octocat.msg;
+                var octocat = await api.getOrder("KqtRQAwWjlqEnS8v", "BTC_USDTK",0,1,10);
+                label5.Text = octocat.code.ToString();
                 label6.Text = octocat.data.ToString();
             }
             catch (ApiException e)

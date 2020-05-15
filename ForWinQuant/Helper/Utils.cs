@@ -57,7 +57,7 @@ namespace ForWinQuant
                 byte[] bytes_out = sha1.ComputeHash(bytes_in);
                 sha1.Dispose();
                 String result = BitConverter.ToString(bytes_out);
-                result = result.Replace("-", "").ToUpper();
+                result = result.Replace("-", "").ToLower();
                 return result;
             }
             catch (Exception ex)

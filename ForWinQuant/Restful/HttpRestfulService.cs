@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -35,15 +36,16 @@ namespace ForWinQuant
 
         const string BaseEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/public";
         const string MarketEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/market";
-        const string MembersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/member";
+        const string MembersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/members";
         const string OrdersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/orders";
-        const string API_KEY = "KqtRQAwWjlqEnS8v";
-        const string API_SECRET = "07OojLSkmAGdiPwm";
+        public const string API_KEY = "KqtRQAwWjlqEnS8v";
+        public const string API_SECRET = "07OojLSkmAGdiPwm";
 
         static readonly TimeSpan RequestTimeout = TimeSpan.FromDays(1);
 
         public static T ForMembersApi<T>()
         {
+            //return RestService.For<T>(MembersEunexUrl);
             return RestService.For<T>(
               new HttpClient(new MembersHttpClientHandler())
               {
@@ -53,20 +55,39 @@ namespace ForWinQuant
               new RefitSettings()
               {
                   ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
-              }) ;
+              });
         }
 
-        public static async Task<HttpResponseMessage> HandleHttpIO(HttpRequestMessage request, HttpResponseMessage response)
+        public static T ForBaseApi<T>()
         {
-            Console.Write("request url: " + request.RequestUri.ToString());
-            var res = await response.Content.ReadAsStringAsync();
-            Console.Write("response data: " + res);
-            if (response.StatusCode != HttpStatusCode.OK)
+            string base_url = "";
+            if(typeof(T).Name.Equals("IMembersApi"))
             {
-                Console.Write("响应错误 {}", JsonConvert.SerializeObject(response.Content));
+                base_url = MembersEunexUrl;
+            }else if (typeof(T).Name.Equals("IBaseApi"))
+            {
+                base_url = BaseEunexUrl;
             }
-            return response;
+            else if (typeof(T).Name.Equals("IMarketApi"))
+            {
+                base_url = MarketEunexUrl;
+            }
+            else if (typeof(T).Name.Equals("IOrdersApi"))
+            {
+                base_url = OrdersEunexUrl;
+            }
+            return RestService.For<T>(
+              new HttpClient(new MembersHttpClientHandler())
+              {
+                  BaseAddress = new Uri(base_url),
+                  Timeout = RequestTimeout
+              },
+              new RefitSettings()
+              {
+                  ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
+              });
         }
+
 
         public static string getSign(string query)
         {
@@ -93,9 +114,37 @@ namespace ForWinQuant
             result = Utils.Sha1Sign(result);
             return result;
         }
-        
-    }
 
+        public static string getSign(Dictionary<string,string> dic)
+        {
+            IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(dic);
+            StringBuilder basestring = new StringBuilder();
+            for (int i = 0; i < sortedParams.Count; i++)
+            {
+                if (i < sortedParams.Count - 1)
+                    basestring.Append(sortedParams.ToList()[i].Key).Append("=").Append(sortedParams.ToList()[i].Value).Append("&");
+                else
+                    basestring.Append(sortedParams.ToList()[i].Key).Append("=").Append(sortedParams.ToList()[i].Value);
+            }
+            basestring.Append("&secret_key=").Append(API_SECRET);
+            string result = basestring.ToString();
+            result = Utils.Sha1Sign(result);
+            return result;
+        }
+
+        public static async Task<HttpResponseMessage> HandleHttpIO(HttpRequestMessage request, HttpResponseMessage response)
+        {
+            Console.Write("request url: " + request.RequestUri.ToString());
+            var res = await response.Content.ReadAsStringAsync();
+            Console.Write("response data: " + res);
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                Console.Write("响应错误 {}", res);
+            }
+            return response;
+        }
+
+    }
 
     class MembersHttpClientHandler : HttpClientHandler
     {
@@ -105,14 +154,16 @@ namespace ForWinQuant
             {
                 return null;
             }
-            Dictionary<string, object> pairs = new Dictionary<string, object>();
+            var timestamp = Utils.GetTimeStamp().ToString();
+            var custemUri = new Uri(request.RequestUri.AbsoluteUri + "&timestamp=" + timestamp);            
+            
+            request.RequestUri = new Uri(custemUri.AbsoluteUri + "&sign=" + HttpRestfulService.getSign(custemUri.Query));
 
-            var oriQuery = request.RequestUri.Query;
-
-            request.RequestUri = new Uri(request.RequestUri.ToString() + "&sign=" + HttpRestfulService.getSign(oriQuery));
             var response = await base.SendAsync(request, cancellationToken);
             var message = await HttpRestfulService.HandleHttpIO(request, response);
             return message;
         }
     }
+
+
 }

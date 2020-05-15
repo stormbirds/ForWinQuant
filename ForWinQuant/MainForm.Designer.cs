@@ -43,6 +43,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageMine = new System.Windows.Forms.TabPage();
             this.splitContainerMine = new System.Windows.Forms.SplitContainer();
@@ -377,7 +378,7 @@
             this.buttonMine.Name = "buttonMine";
             this.buttonMine.Size = new System.Drawing.Size(203, 40);
             this.buttonMine.TabIndex = 14;
-            this.buttonMine.Text = "正在初始化";
+            this.buttonMine.Text = "登录";
             this.buttonMine.UseVisualStyleBackColor = false;
             this.buttonMine.Click += new System.EventHandler(this.buttonMine_Click);
             // 
@@ -639,6 +640,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 611);
             this.Controls.Add(this.toolStripContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1080, 650);
             this.Name = "MainForm";
             this.Text = "ForWinQuant";
