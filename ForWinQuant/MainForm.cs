@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,8 @@ namespace ForWinQuant
 {
     public partial class MainForm : Form
     {
-        
 
+        const string DEBUG_USER = "DEBUG用户";
 
         public delegate void RefreshChartDelegate(List<int> x, List<int> y, string type);
 
@@ -35,6 +36,9 @@ namespace ForWinQuant
             labelUserName.Text = "账号：";
             label_USDT_value.Text = "可用--，冻结--";
             label_NGRC_value.Text = "可用--，冻结--";
+#if DEBUG
+            loginStatusChanged(DEBUG_USER, true);
+#endif
         }
 
         private async void getUserBalances(string key,string secret)
@@ -86,6 +90,24 @@ namespace ForWinQuant
                 float ngrcPrice;
                 
                 labelCurrentPrice.Text = float.TryParse(resJson.data["asks"][0][0].ToString(),out ngrcPrice)?ngrcPrice.ToString():"获取失败";
+                await Task.Delay(TimeSpan.FromSeconds(5));
+                getTodayTrading(key, secret);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void getTodayTrading(string key, string secret)
+        {
+            HttpRestfulService.API_KEY = key;
+            HttpRestfulService.API_SECRET = secret;
+            var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
+            try
+            {
+                var resJson = await api.getOrder(key, "NGRC_USDT",6,0,50);
+                resJson.data.ToString();
 
             }
             catch
@@ -96,10 +118,21 @@ namespace ForWinQuant
 
         private void buttonMine_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm(this);
-            loginForm.Show();
+            if (buttonMine.Text == "登录")
+            {
+                LoginForm loginForm = new LoginForm(this);
+                loginForm.Show();
+            }else if(buttonMine.Text == "开始刷单")
+            {
+
+            }
         }
 
+        /// <summary>
+        /// 登录状态变更
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="logged"></param>
         public void loginStatusChanged(string username, bool logged)
         {
             toolStripStatusLabelLogin.Text = logged ? username + " 已登录 " : username + "登录失败";
@@ -113,6 +146,12 @@ namespace ForWinQuant
 
         private async void getUserList()
         {
+#if DEBUG
+            try {
+                labelUserName.Text = string.Format("账户：{0}", DEBUG_USER);
+                await Task.Delay(TimeSpan.FromSeconds(3));
+                getUserBalances(HttpRestfulService.API_KEY, HttpRestfulService.API_SECRET);
+#else
             var api = HttpRestfulService.ForBaseApi<IUserApi>();
             try
             {
@@ -123,6 +162,7 @@ namespace ForWinQuant
                 HttpRestfulService.API_SECRET = listUser[0].api_secret;
                 labelUserName.Text = string.Format("账户：{0}",listUser[0].eunex_name) ;
                 getUserBalances(listUser[0].api_key, listUser[0].api_secret);
+#endif
             }
             catch(Exception e)
             {
