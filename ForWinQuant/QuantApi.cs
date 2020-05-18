@@ -57,7 +57,9 @@ namespace ForWinQuant
             try
             {
                 result = JsonConvert.DeserializeObject<Dictionary<string, object>>(resMeta);
-                if ((long)result["code"] == 0)
+                if(result == null) {
+                    code = -1;
+                }else if ((long)result["code"] == 0)
                 {
                     code = 0;
                     string auth = result[APPSETINGTOKENKEY].ToString();
@@ -78,7 +80,6 @@ namespace ForWinQuant
 
         public T Execute<T>(RestRequest request) where T : new()
         {
-            //request.AddParameter("AccountSid", _accountSid, ParameterType.UrlSegment); // used on every request
             var response = _client.Execute<T>(request);
 
             if (response.ErrorException != null)
