@@ -158,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\ChartHelper.cs" />
+    <Compile Include="Model\EunexUser.cs" />
     <Compile Include="Restful\HttpRestfulService.cs" />
     <Compile Include="Restful\IBaseApi.cs" />
     <Compile Include="Restful\IMarketApi.cs" />
@@ -179,6 +180,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuantAuth.cs" />
+    <Compile Include="Restful\IUserApi.cs" />
     <Compile Include="Restful\Restful.cs" />
     <Compile Include="Helper\Utils.cs" />
     <EmbeddedResource Include="LoginForm.resx">

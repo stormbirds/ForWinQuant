@@ -13,6 +13,13 @@ namespace ForWinQuant
         public string msg { get; set; }
     }
 
+    public class AuthModel
+    {
+        public string access_token { get; set; }
+        public int code { get; set; }
+        public string msg { get; set; }
+    }
+
     public static class HttpStatuscode
     {
         public static int Success = 0;

@@ -17,6 +17,7 @@ using Newtonsoft.Json.Serialization;
 using Refit;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -38,8 +39,11 @@ namespace ForWinQuant
         const string MarketEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/market";
         const string MembersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/members";
         const string OrdersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/orders";
-        public const string API_KEY = "KqtRQAwWjlqEnS8v";
-        public const string API_SECRET = "07OojLSkmAGdiPwm";
+        const string TestServerUrl = "http://192.168.1.114:8000";
+        public static string API_KEY = "KqtRQAwWjlqEnS8v";
+        public static string API_SECRET = "07OojLSkmAGdiPwm";
+
+        public static string Access_Token = "";
 
         static readonly TimeSpan RequestTimeout = TimeSpan.FromDays(1);
 
@@ -61,21 +65,39 @@ namespace ForWinQuant
         public static T ForBaseApi<T>()
         {
             string base_url = "";
-            if(typeof(T).Name.Equals("IMembersApi"))
+
+            switch (typeof(T).Name)
             {
-                base_url = MembersEunexUrl;
-            }else if (typeof(T).Name.Equals("IBaseApi"))
-            {
-                base_url = BaseEunexUrl;
+                case "IMembersApi":
+                    base_url = MembersEunexUrl;
+                    break;
+                case "IBaseApi":
+                    base_url = BaseEunexUrl;
+                    break;
+                case "IMarketApi":
+                    base_url = MarketEunexUrl;
+                    break;
+                case "IOrdersApi":
+                    base_url = OrdersEunexUrl;
+                    break;
+                case "IUserApi":
+                    base_url = TestServerUrl;
+                    return RestService.For<T>(
+                      new HttpClient(new UserHttpClientHandler())
+                      {
+                          BaseAddress = new Uri(base_url),
+                          Timeout = RequestTimeout
+                      },
+                      new RefitSettings()
+                      {
+                          ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
+                      });
+
+                default:
+                    base_url = TestServerUrl;
+                    break;
             }
-            else if (typeof(T).Name.Equals("IMarketApi"))
-            {
-                base_url = MarketEunexUrl;
-            }
-            else if (typeof(T).Name.Equals("IOrdersApi"))
-            {
-                base_url = OrdersEunexUrl;
-            }
+
             return RestService.For<T>(
               new HttpClient(new MembersHttpClientHandler())
               {
@@ -115,7 +137,7 @@ namespace ForWinQuant
             return result;
         }
 
-        public static string getSign(Dictionary<string,string> dic)
+        public static string getSign(Dictionary<string, string> dic)
         {
             IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(dic);
             StringBuilder basestring = new StringBuilder();
@@ -135,17 +157,30 @@ namespace ForWinQuant
         public static async Task<HttpResponseMessage> HandleHttpIO(HttpRequestMessage request, HttpResponseMessage response)
         {
             Console.Write("request url: " + request.RequestUri.ToString());
-            var res = await response.Content.ReadAsStringAsync();
+            var res = "";
+            res = await response.Content.ReadAsStringAsync();
             Console.Write("response data: " + res);
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                Console.Write("响应错误 {}", res);
+                Console.Write("响应错误 {}", res);                
             }
             return response;
         }
 
     }
 
+    class UserHttpClientHandler : HttpClientHandler
+    {
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var access_token = ForWinQuant.Properties.Settings.Default.access_token;
+            if (access_token != null && !string.IsNullOrWhiteSpace(access_token))
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(access_token);
+            var response = await base.SendAsync(request, cancellationToken);
+            var message = await HttpRestfulService.HandleHttpIO(request, response);
+            return message;
+        }
+    }
     class MembersHttpClientHandler : HttpClientHandler
     {
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -155,8 +190,8 @@ namespace ForWinQuant
                 return null;
             }
             var timestamp = Utils.GetTimeStamp().ToString();
-            var custemUri = new Uri(request.RequestUri.AbsoluteUri + "&timestamp=" + timestamp);            
-            
+            var custemUri = new Uri(request.RequestUri.AbsoluteUri + "&timestamp=" + timestamp);
+
             request.RequestUri = new Uri(custemUri.AbsoluteUri + "&sign=" + HttpRestfulService.getSign(custemUri.Query));
 
             var response = await base.SendAsync(request, cancellationToken);
