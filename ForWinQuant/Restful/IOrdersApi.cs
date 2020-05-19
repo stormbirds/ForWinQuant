@@ -113,5 +113,16 @@ namespace ForWinQuant
         public float avgPrice { get; set; }
         public long lastModifiedAt { set; get; }
         public long version { set; get; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Order order &&
+                   id == order.id;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1877310944 + id.GetHashCode();
+        }
     }
 }

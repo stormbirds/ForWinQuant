@@ -49,14 +49,30 @@
             this.splitContainerMine = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewUserOrder = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pairCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tradeCoinKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceCoinKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matched = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.icon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amounts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastModifiedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -88,11 +104,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBarRequest = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.timerChart = new System.Windows.Forms.Timer(this.components);
             this.timerAction = new System.Windows.Forms.Timer(this.components);
             this.timerDebug = new System.Windows.Forms.Timer(this.components);
-            this.toolStripProgressBarRequest = new System.Windows.Forms.ToolStripProgressBar();
             this.mainTabControl.SuspendLayout();
             this.tabPageMine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).BeginInit();
@@ -179,62 +195,209 @@
             // 
             // dataGridViewUserOrder
             // 
+            this.dataGridViewUserOrder.AllowUserToDeleteRows = false;
             this.dataGridViewUserOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUserOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
+            this.id,
+            this.orderId,
+            this.orderKey,
+            this.memberId,
+            this.memberKey,
+            this.usr,
+            this.clientId,
+            this.orderType,
+            this.pairCode,
+            this.tradeCoinKey,
+            this.priceCoinKey,
+            this.priceType,
+            this.price,
+            this.quantity,
+            this.lastQuantity,
+            this.orderStatus,
+            this.matched,
+            this.createdAt,
+            this.icon,
+            this.fee,
+            this.amounts,
+            this.avgPrice,
+            this.lastModifiedAt,
+            this.version});
             this.dataGridViewUserOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUserOrder.Location = new System.Drawing.Point(3, 276);
             this.dataGridViewUserOrder.Name = "dataGridViewUserOrder";
+            this.dataGridViewUserOrder.ReadOnly = true;
             this.dataGridViewUserOrder.RowTemplate.Height = 23;
             this.dataGridViewUserOrder.Size = new System.Drawing.Size(700, 268);
             this.dataGridViewUserOrder.TabIndex = 4;
             // 
-            // Column1
+            // id
             // 
-            this.Column1.HeaderText = "操作";
-            this.Column1.Name = "Column1";
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
-            // Column2
+            // orderId
             // 
-            this.Column2.HeaderText = "代码";
-            this.Column2.Name = "Column2";
+            this.orderId.DataPropertyName = "orderId";
+            this.orderId.HeaderText = "订单ID";
+            this.orderId.Name = "orderId";
+            this.orderId.ReadOnly = true;
             // 
-            // Column3
+            // orderKey
             // 
-            this.Column3.HeaderText = "记录";
-            this.Column3.Name = "Column3";
+            this.orderKey.DataPropertyName = "orderKey";
+            this.orderKey.HeaderText = "订单Key";
+            this.orderKey.Name = "orderKey";
+            this.orderKey.ReadOnly = true;
             // 
-            // Column4
+            // memberId
             // 
-            this.Column4.HeaderText = "持有量";
-            this.Column4.Name = "Column4";
+            this.memberId.DataPropertyName = "memberId";
+            this.memberId.HeaderText = "用户ID";
+            this.memberId.Name = "memberId";
+            this.memberId.ReadOnly = true;
             // 
-            // Column5
+            // memberKey
             // 
-            this.Column5.HeaderText = "可卖量";
-            this.Column5.Name = "Column5";
+            this.memberKey.DataPropertyName = "memberKey";
+            this.memberKey.HeaderText = "用户Key";
+            this.memberKey.Name = "memberKey";
+            this.memberKey.ReadOnly = true;
             // 
-            // Column6
+            // usr
             // 
-            this.Column6.HeaderText = "成本价";
-            this.Column6.Name = "Column6";
+            this.usr.DataPropertyName = "usr";
+            this.usr.HeaderText = "用户";
+            this.usr.Name = "usr";
+            this.usr.ReadOnly = true;
             // 
-            // Column7
+            // clientId
             // 
-            this.Column7.HeaderText = "市值";
-            this.Column7.Name = "Column7";
+            this.clientId.DataPropertyName = "clientId";
+            this.clientId.HeaderText = "平台ID";
+            this.clientId.Name = "clientId";
+            this.clientId.ReadOnly = true;
             // 
-            // Column8
+            // orderType
             // 
-            this.Column8.HeaderText = "盈亏金额";
-            this.Column8.Name = "Column8";
+            this.orderType.DataPropertyName = "orderType";
+            this.orderType.HeaderText = "订单类型-操作";
+            this.orderType.Name = "orderType";
+            this.orderType.ReadOnly = true;
+            // 
+            // pairCode
+            // 
+            this.pairCode.DataPropertyName = "pairCode";
+            this.pairCode.HeaderText = "pairCode";
+            this.pairCode.Name = "pairCode";
+            this.pairCode.ReadOnly = true;
+            // 
+            // tradeCoinKey
+            // 
+            this.tradeCoinKey.DataPropertyName = "tradeCoinKey";
+            this.tradeCoinKey.HeaderText = "tradeCoinKey";
+            this.tradeCoinKey.Name = "tradeCoinKey";
+            this.tradeCoinKey.ReadOnly = true;
+            // 
+            // priceCoinKey
+            // 
+            this.priceCoinKey.DataPropertyName = "priceCoinKey";
+            this.priceCoinKey.HeaderText = "priceCoinKey";
+            this.priceCoinKey.Name = "priceCoinKey";
+            this.priceCoinKey.ReadOnly = true;
+            // 
+            // priceType
+            // 
+            this.priceType.DataPropertyName = "priceType";
+            this.priceType.HeaderText = "priceType";
+            this.priceType.Name = "priceType";
+            this.priceType.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // lastQuantity
+            // 
+            this.lastQuantity.DataPropertyName = "lastQuantity";
+            this.lastQuantity.HeaderText = "lastQuantity";
+            this.lastQuantity.Name = "lastQuantity";
+            this.lastQuantity.ReadOnly = true;
+            // 
+            // orderStatus
+            // 
+            this.orderStatus.DataPropertyName = "orderStatus";
+            this.orderStatus.HeaderText = "订单状态";
+            this.orderStatus.Name = "orderStatus";
+            this.orderStatus.ReadOnly = true;
+            // 
+            // matched
+            // 
+            this.matched.DataPropertyName = "matched";
+            this.matched.HeaderText = "matched";
+            this.matched.Name = "matched";
+            this.matched.ReadOnly = true;
+            // 
+            // createdAt
+            // 
+            this.createdAt.DataPropertyName = "createdAt";
+            this.createdAt.HeaderText = "创建时间";
+            this.createdAt.Name = "createdAt";
+            this.createdAt.ReadOnly = true;
+            // 
+            // icon
+            // 
+            this.icon.DataPropertyName = "icon";
+            this.icon.HeaderText = "icon";
+            this.icon.Name = "icon";
+            this.icon.ReadOnly = true;
+            // 
+            // fee
+            // 
+            this.fee.DataPropertyName = "fee";
+            this.fee.HeaderText = "金额";
+            this.fee.Name = "fee";
+            this.fee.ReadOnly = true;
+            // 
+            // amounts
+            // 
+            this.amounts.DataPropertyName = "amounts";
+            this.amounts.HeaderText = "数量";
+            this.amounts.Name = "amounts";
+            this.amounts.ReadOnly = true;
+            // 
+            // avgPrice
+            // 
+            this.avgPrice.DataPropertyName = "avgPrice";
+            this.avgPrice.HeaderText = "平均价格";
+            this.avgPrice.Name = "avgPrice";
+            this.avgPrice.ReadOnly = true;
+            // 
+            // lastModifiedAt
+            // 
+            this.lastModifiedAt.DataPropertyName = "lastModifiedAt";
+            this.lastModifiedAt.HeaderText = "上次修改时间";
+            this.lastModifiedAt.Name = "lastModifiedAt";
+            this.lastModifiedAt.ReadOnly = true;
+            // 
+            // version
+            // 
+            this.version.DataPropertyName = "version";
+            this.version.HeaderText = "版本";
+            this.version.Name = "version";
+            this.version.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -610,6 +773,12 @@
             this.toolStripStatusLabelLogin.Size = new System.Drawing.Size(44, 17);
             this.toolStripStatusLabelLogin.Text = "未登录";
             // 
+            // toolStripProgressBarRequest
+            // 
+            this.toolStripProgressBarRequest.Name = "toolStripProgressBarRequest";
+            this.toolStripProgressBarRequest.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBarRequest.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            // 
             // toolStripContainer1
             // 
             // 
@@ -640,7 +809,6 @@
             // 
             // timerAction
             // 
-            this.timerAction.Enabled = true;
             this.timerAction.Interval = 60000;
             this.timerAction.Tick += new System.EventHandler(this.timerAction_Tick);
             // 
@@ -648,12 +816,6 @@
             // 
             this.timerDebug.Interval = 500;
             this.timerDebug.Tick += new System.EventHandler(this.timerDebug_Tick);
-            // 
-            // toolStripProgressBarRequest
-            // 
-            this.toolStripProgressBarRequest.Name = "toolStripProgressBarRequest";
-            this.toolStripProgressBarRequest.Size = new System.Drawing.Size(100, 16);
-            this.toolStripProgressBarRequest.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             // 
             // MainForm
             // 
@@ -727,14 +889,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dataGridViewUserOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
@@ -743,6 +897,30 @@
         private System.Windows.Forms.Timer timerAction;
         private System.Windows.Forms.Timer timerDebug;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarRequest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn memberId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn memberKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pairCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tradeCoinKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceCoinKey;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matched;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn icon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amounts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avgPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastModifiedAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn version;
     }
 }
 

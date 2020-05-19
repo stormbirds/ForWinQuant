@@ -26,7 +26,7 @@ namespace ForWinQuant.Helper
 {
     public class EunexHelper
     {
-        public static float countOrdersByDay(List<Order> orders, DateTimeOffset date=new DateTimeOffset())
+        public static float countOrdersByDay(List<Order> orders, DateTimeOffset date)
         {
             float count = 0;
             foreach(Order order in orders)

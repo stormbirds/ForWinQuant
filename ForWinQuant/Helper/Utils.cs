@@ -45,12 +45,12 @@ namespace ForWinQuant
         /// <returns></returns>
         public static long GetTimeStampSeconds()
         {
-            return new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+            return DateTimeOffset.Now.ToUnixTimeSeconds();
         }
 
         public static long GetTimeStampMilliseconds()
         {
-            return new DateTimeOffset(DateTime.UtcNow).ToUnixTimeMilliseconds();
+            return DateTimeOffset.Now.ToUnixTimeMilliseconds();
         }
 
         public static String Sha1Sign(String content, Encoding encode = null)
