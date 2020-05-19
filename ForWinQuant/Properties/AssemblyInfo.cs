@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ForWinQuant")]
 [assembly: AssemblyDescription("非凡量化")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("陕西寒悦网络科技有限公司")]
 [assembly: AssemblyProduct("ForWinQuant")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

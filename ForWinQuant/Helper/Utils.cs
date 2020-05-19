@@ -28,20 +28,27 @@ namespace ForWinQuant
         /// </summary>  
         /// <param name="timeStamp">Unix时间戳格式,例如1482115779</param>  
         /// <returns>C#格式时间</returns>  
-        public static DateTime GetTime(string timeStamp)
+        public static DateTimeOffset GetTime(string timeStamp)
         {
-            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
-            long lTime = long.Parse(timeStamp + "0000000");
-            TimeSpan toNow = new TimeSpan(lTime);
-            return dtStart.Add(toNow);
+            long lTime = long.Parse(timeStamp);
+            return DateTimeOffset.FromUnixTimeMilliseconds(lTime);
         }
 
+        public static DateTimeOffset ToDateTime(long timeStamp)
+        {
+            return DateTimeOffset.FromUnixTimeMilliseconds(timeStamp);
+        }
 
         /// <summary>
-        /// 获取当前时间戳
+        /// 获取当前时间戳(UNIX秒)
         /// </summary>
         /// <returns></returns>
-        public static long GetTimeStamp()
+        public static long GetTimeStampSeconds()
+        {
+            return new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+        }
+
+        public static long GetTimeStampMilliseconds()
         {
             return new DateTimeOffset(DateTime.UtcNow).ToUnixTimeMilliseconds();
         }

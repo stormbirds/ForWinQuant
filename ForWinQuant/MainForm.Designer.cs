@@ -48,7 +48,7 @@
             this.tabPageMine = new System.Windows.Forms.TabPage();
             this.splitContainerMine = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUserOrder = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +69,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label_USDT_value = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelCountTradeToday = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.labelTodayRound = new System.Windows.Forms.Label();
             this.labelCurrentPrice = new System.Windows.Forms.Label();
@@ -89,7 +89,10 @@
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerChart = new System.Windows.Forms.Timer(this.components);
+            this.timerAction = new System.Windows.Forms.Timer(this.components);
+            this.timerDebug = new System.Windows.Forms.Timer(this.components);
+            this.toolStripProgressBarRequest = new System.Windows.Forms.ToolStripProgressBar();
             this.mainTabControl.SuspendLayout();
             this.tabPageMine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).BeginInit();
@@ -97,7 +100,7 @@
             this.splitContainerMine.Panel2.SuspendLayout();
             this.splitContainerMine.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -163,7 +166,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridViewUserOrder, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
@@ -174,10 +177,10 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(706, 547);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // dataGridView1
+            // dataGridViewUserOrder
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewUserOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUserOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -186,12 +189,12 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 276);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 268);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridViewUserOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewUserOrder.Location = new System.Drawing.Point(3, 276);
+            this.dataGridViewUserOrder.Name = "dataGridViewUserOrder";
+            this.dataGridViewUserOrder.RowTemplate.Height = 23;
+            this.dataGridViewUserOrder.Size = new System.Drawing.Size(700, 268);
+            this.dataGridViewUserOrder.TabIndex = 4;
             // 
             // Column1
             // 
@@ -355,7 +358,7 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label_USDT_value);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.labelCountTradeToday);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.labelTodayRound);
             this.panel1.Controls.Add(this.labelCurrentPrice);
@@ -424,16 +427,16 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "USDT";
             // 
-            // label9
+            // labelCountTradeToday
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(55, 240);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(14, 14);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "-";
+            this.labelCountTradeToday.AutoSize = true;
+            this.labelCountTradeToday.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelCountTradeToday.ForeColor = System.Drawing.Color.Red;
+            this.labelCountTradeToday.Location = new System.Drawing.Point(55, 240);
+            this.labelCountTradeToday.Name = "labelCountTradeToday";
+            this.labelCountTradeToday.Size = new System.Drawing.Size(14, 14);
+            this.labelCountTradeToday.TabIndex = 9;
+            this.labelCountTradeToday.Text = "-";
             // 
             // label10
             // 
@@ -592,7 +595,8 @@
             // 
             this.mainStatusStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelLogin});
+            this.toolStripStatusLabelLogin,
+            this.toolStripProgressBarRequest});
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 0);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.Size = new System.Drawing.Size(1064, 22);
@@ -628,11 +632,28 @@
             this.toolStripContainer1.Text = "toolStripContainer1";
             this.toolStripContainer1.TopToolStripPanelVisible = false;
             // 
-            // timer1
+            // timerChart
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerChart.Enabled = true;
+            this.timerChart.Interval = 500;
+            this.timerChart.Tick += new System.EventHandler(this.timerChart_Tick);
+            // 
+            // timerAction
+            // 
+            this.timerAction.Enabled = true;
+            this.timerAction.Interval = 60000;
+            this.timerAction.Tick += new System.EventHandler(this.timerAction_Tick);
+            // 
+            // timerDebug
+            // 
+            this.timerDebug.Interval = 500;
+            this.timerDebug.Tick += new System.EventHandler(this.timerDebug_Tick);
+            // 
+            // toolStripProgressBarRequest
+            // 
+            this.toolStripProgressBarRequest.Name = "toolStripProgressBarRequest";
+            this.toolStripProgressBarRequest.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBarRequest.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             // 
             // MainForm
             // 
@@ -651,7 +672,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).EndInit();
             this.splitContainerMine.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -686,7 +707,7 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.GroupBox groupBoxAction;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelCountTradeToday;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelTodayRound;
         private System.Windows.Forms.Label labelCurrentPrice;
@@ -702,10 +723,10 @@
         private System.Windows.Forms.Label label_USDT_value;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerChart;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewUserOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -719,6 +740,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.Timer timerAction;
+        private System.Windows.Forms.Timer timerDebug;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarRequest;
     }
 }
 

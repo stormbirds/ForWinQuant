@@ -31,7 +31,7 @@ namespace ForWinQuant
         /// <param name="postOrder"></param>
         /// <returns></returns>
         [Post("/{type}")]
-        Task<Restful<JObject>> createOrder(string api_id, string type, [Body]PostOrder postOrder);
+        Task<Restful<JObject>> CreateOrder(string type, [Body]PostOrder postOrder);
 
         /// <summary>
         /// 查询我的订单列表
@@ -43,7 +43,7 @@ namespace ForWinQuant
         /// <param name="pageSize">分⻚</param>
         /// <returns></returns>
         [Get("")]
-        Task<Restful<JObject>> getOrder(string api_id, string pairSymbol, int states, int pageNum, int pageSize);
+        Task<Restful<OrderContent>> GetOrder(string pairSymbol, int states, int pageNum, int pageSize);
 
         /// <summary>
         /// 查询指定订单
@@ -52,7 +52,7 @@ namespace ForWinQuant
         /// <param name="order_id"></param>
         /// <returns></returns>
         [Get("/{order_id}")]
-        Task<Restful<Order>> getOrder(string api_id, string order_id);
+        Task<Restful<Order>> GetOrder(string order_id);
 
         /// <summary>
         /// 申请撤销订单
@@ -61,7 +61,7 @@ namespace ForWinQuant
         /// <param name="order_id"></param>
         /// <returns></returns>
         [Post("/{order_id}/cancellation")]
-        Task<Restful<JObject>> cancelOrder(string api_id, string order_id);
+        Task<Restful<JObject>> CancelOrder(string order_id);
 
         /// <summary>
         /// 查询指定订单的成交记录
@@ -72,14 +72,19 @@ namespace ForWinQuant
         /// <param name="pageSize"></param>
         /// <returns></returns>
         [Get("/{order_id}/trade-histories")]
-        Task<Restful<JObject>> getOrderTrade(string api_id, string order_id, int pageNum, int pageSize);
+        Task<Restful<JObject>> GetOrderTrade(string order_id, int pageNum, int pageSize);
     }
 
     public class PostOrder
     {
         public string pairSymbol { set; get; }
-        public decimal price { set; get; }
-        public int quantity { set; get; }
+        public float price { set; get; }
+        public float quantity { set; get; }
+    }
+
+    public class OrderContent
+    {
+        public List<Order> content { get; set; }
     }
 
     public class Order
@@ -97,12 +102,16 @@ namespace ForWinQuant
         public string priceCoinKey { set; get; }
         public int priceType { set; get; }
         public decimal price { set; get; }
-        public int quantity { set; get; }
-        public int lastQuantity { set; get; }
+        public float quantity { set; get; }
+        public float lastQuantity { set; get; }
         public int orderStatus { set; get; }
         public bool matched { set; get; }
-        public int createdAt { set; get; }
-        public int lastModifiedAt { set; get; }
+        public long createdAt { set; get; }
+        public string icon { get; set; }
+        public float fee { get; set; }
+        public float amounts { get; set; }
+        public float avgPrice { get; set; }
+        public long lastModifiedAt { set; get; }
         public long version { set; get; }
     }
 }

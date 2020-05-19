@@ -162,7 +162,7 @@ namespace ForWinQuant
             Console.Write("response data: " + res);
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                Console.Write("响应错误 {}", res);                
+                Console.Write("响应错误 {res}");                
             }
             return response;
         }
@@ -189,8 +189,11 @@ namespace ForWinQuant
             {
                 return null;
             }
-            var timestamp = Utils.GetTimeStamp().ToString();
-            var custemUri = new Uri(request.RequestUri.AbsoluteUri + "&timestamp=" + timestamp);
+            var timestamp = Utils.GetTimeStampMilliseconds().ToString();
+            var originUri = request.RequestUri.AbsoluteUri;
+
+            originUri = string.IsNullOrWhiteSpace( request.RequestUri.Query) ? (originUri + "?") : (originUri + "&");
+            var custemUri = new Uri(string.Format("{0}api_id={1}&timestamp={2}", originUri, HttpRestfulService.API_KEY, timestamp));
 
             request.RequestUri = new Uri(custemUri.AbsoluteUri + "&sign=" + HttpRestfulService.getSign(custemUri.Query));
 

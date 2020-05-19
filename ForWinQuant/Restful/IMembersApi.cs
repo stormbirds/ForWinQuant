@@ -17,15 +17,15 @@ namespace ForWinQuant
         /// <returns></returns>
         [Headers("Content-Type:application/json;charset=utf8")]
         [Get("/user-balances")]
-        Task<Restful<List<UserBalances>>> GetUserBalances(string api_id);
+        Task<Restful<List<UserBalances>>> GetUserBalances();
 
     }
 
     public class UserBalances
     {
         public string symbol { set; get; }
-        public double amounts { set; get; }
-        public double frozen { set; get; }
+        public float amounts { set; get; }
+        public float frozen { set; get; }
     }
 
 }

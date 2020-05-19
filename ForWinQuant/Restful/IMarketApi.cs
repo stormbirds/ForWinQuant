@@ -49,7 +49,7 @@ namespace ForWinQuant
         ///}
         /// </returns>
         [Get("/depth/{pair_symbol}")]
-        Task<Restful<JObject>> GetDepthDetails(string api_id, string pair_symbol);
+        Task<Restful<JObject>> GetDepthDetails(string pair_symbol);
 
         /// <summary>
         /// 获取最新成交明细
@@ -58,6 +58,6 @@ namespace ForWinQuant
         /// <param name="pair_symbol"></param>
         /// <returns></returns>
         [Get("/{pair_symbol}")]
-        Task<Restful<JObject>> GetPairSymbol(string api_id, string pair_symbol);
+        Task<Restful<JObject>> GetPairSymbol(string pair_symbol);
     }
 }
