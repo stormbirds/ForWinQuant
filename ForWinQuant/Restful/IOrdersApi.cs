@@ -31,7 +31,7 @@ namespace ForWinQuant
         /// <param name="postOrder"></param>
         /// <returns></returns>
         [Post("/{type}")]
-        Task<Restful<JObject>> CreateOrder(string type, [Body]PostOrder postOrder);
+        Task<Restful<JObject>> CreateOrder(string type, [Body(BodySerializationMethod.Serialized)]PostOrder postOrder);
 
         /// <summary>
         /// 查询我的订单列表
@@ -44,6 +44,16 @@ namespace ForWinQuant
         /// <returns></returns>
         [Get("")]
         Task<Restful<OrderContent>> GetOrder(string pairSymbol, int states, int pageNum, int pageSize);
+
+        /// <summary>
+        /// 查询我的所有订单列表
+        /// </summary>
+        /// <param name="pairSymbol"></param>
+        /// <param name="pageNum"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        [Get("")]
+        Task<Restful<OrderContent>> GetOrder(string pairSymbol, int pageNum, int pageSize);
 
         /// <summary>
         /// 查询指定订单

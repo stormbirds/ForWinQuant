@@ -103,6 +103,12 @@ namespace ForWinQuant.Helper
             return api.GetOrder(pairSymbol,states,pageNum,pageSize);
         }
 
+        public static Task<Restful<OrderContent>> GetOrder(string pairSymbol, int pageNum, int pageSize)
+        {
+            var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
+            return api.GetOrder(pairSymbol, pageNum, pageSize);
+        }
+
         public static Task<Restful<Order>> GetOrder(string order_id)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();

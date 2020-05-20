@@ -52,7 +52,7 @@ namespace ForWinQuant
 
             if (String.IsNullOrEmpty(textBox_username.Text) || String.IsNullOrEmpty(textBox_password.Text))
             {
-                MessageBox.Show("错误", "请输入账号密码");
+                MessageBox.Show("请输入账号密码", "错误");
                 init();
                 return;
             }

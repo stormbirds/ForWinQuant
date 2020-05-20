@@ -17,6 +17,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ForWinQuant
 {
+    
     public partial class MainForm : Form
     {
 
@@ -33,7 +34,7 @@ namespace ForWinQuant
         private float ngrc_price = 0;
 
         /// <summary>
-        /// 
+        /// 初始化用户状态：-1未初始化，0正在初始化，1初始化完成
         /// </summary>
         private int initStates = -1;
         /// <summary>
@@ -41,6 +42,19 @@ namespace ForWinQuant
         /// </summary>
         private int actionStates = -1;
 
+        enum RequestSatesCode { STOP, RUNING}
+        /// <summary>
+        /// 欧联接口上次请求时间
+        /// </summary>
+        private DateTimeOffset lastRequestTime;
+
+        /// <summary>
+        /// 欧联接口请求状态，用于保证每次接口请求间隔超过5秒
+        /// </summary>
+        private RequestSatesCode requestSates;
+        /// <summary>
+        /// 用户订单列表，用于图表展示
+        /// </summary>
         private BindingList<Order> userOrders ; 
 
         public delegate void RefreshChartDelegate(List<int> x, List<int> y, string type);
@@ -55,21 +69,23 @@ namespace ForWinQuant
 
         public void init()
         {
+            requestSates = RequestSatesCode.STOP;
+            lastRequestTime = DateTimeOffset.Now;
             dataGridViewUserOrder.CellFormatting += DataGridViewUserOrder_CellFormatting;
             userOrders = new BindingList<Order>();
             
-            userOrders.Append(new Order() { id = 1 ,orderId="orderId"}) ;
             this.dataGridViewUserOrder.DataSource = userOrders ;
             labelUserName.Text = "账号：";
             label_USDT_value.Text = "可用--，冻结--";
             label_NGRC_value.Text = "可用--，冻结--";
             this.initStates = -1;
 
-            eunexAction();
 #if DEBUG
             loginStatusChanged(DEBUG_USER, true);
 #endif
         }
+
+
 
         private void DataGridViewUserOrder_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -81,24 +97,34 @@ namespace ForWinQuant
                 switch ((int)dgv["orderType", e.RowIndex].Value)
                 {
                     case 0:
-                        e.Value = "卖出";
-                        e.FormattingApplied = true;
-                        break;
-                    case 1:
                         e.Value = "买入";
                         e.FormattingApplied = true;
                         break;
+                    case 1:
+                        e.Value = "卖出";
+                        e.FormattingApplied = true;
+                        break;
                 }
+            }
+            if (dgv.Columns[e.ColumnIndex].Name == "createdAt" &&
+                e.RowIndex >= 0 &&
+                dgv["createdAt", e.RowIndex].Value is long)
+            {
+                e.Value = Utils.ToDateTime((long)dgv["createdAt", e.RowIndex].Value).ToLocalTime().ToString();
+                e.FormattingApplied = true;
             }
         }
 
         private async void eunexAction()
         {
-            
+
             try
             {
+                await delayedRequest();
                 ///获取用户资产
                 Restful<List<UserBalances>> userBalances = await EunexHelper.GetUserBalances();
+                requestSates = RequestSatesCode.STOP;
+                lastRequestTime = DateTimeOffset.Now;
                 foreach (UserBalances balances in userBalances.data)
                 {
                     if (balances.symbol.Equals("USDT"))
@@ -114,21 +140,28 @@ namespace ForWinQuant
                     }
 
                 }
-                updateUI(string.Format("可用：{0:f2}，冻结：{0:f2}", usdt_amount, usdt_frozen), "label_USDT_value");
-                updateUI(string.Format("可用：{0:f2}，冻结：{0:f2}", ngrc_amount, ngrc_frozen), "label_NGRC_value");
+                updateUI(string.Format("可用：{0:f2}，冻结：{1:f2}", usdt_amount, usdt_frozen), "label_USDT_value");
+                updateUI(string.Format("可用：{0:f2}，冻结：{1:f2}", ngrc_amount, ngrc_frozen), "label_NGRC_value");
 
-
-                await Task.Delay(TimeSpan.FromSeconds(5));
+                await delayedRequest();
                 /// 获取NGRC报价
                 var resJson = await EunexHelper.GetDepthDetails("NGRC_USDT");
+                requestSates = RequestSatesCode.STOP;
+                lastRequestTime = DateTimeOffset.Now;
                 var labelCurrentPriceText = float.TryParse(resJson.data["asks"][0][0].ToString(), out ngrc_price) ? ngrc_price.ToString() : "获取失败";
                 updateUI(labelCurrentPriceText, "labelCurrentPrice");
 
-                await Task.Delay(TimeSpan.FromSeconds(5));
+
+                await delayedRequest();
                 ///获取并检查用户订单状况
-                var orders = await EunexHelper.GetOrder("NGRC_USDT", 20, 0, 50);
-                foreach(Order order in orders.data.content)
-                        userOrders.Add(order);
+                var orders = await EunexHelper.GetOrder("NGRC_USDT" ,20 , 0, 50);
+                requestSates = RequestSatesCode.STOP;
+                lastRequestTime = DateTimeOffset.Now;
+                foreach (Order order in orders.data.content) 
+                { 
+                    if(!userOrders.Contains(order)) userOrders.Add(order);
+                }
+                        
                 countTradeToday = EunexHelper.countOrdersByDay(orders.data.content, DateTimeOffset.Now);
                 updateUI(countTradeToday.ToString(), "labelCountTradeToday");
 
@@ -141,6 +174,7 @@ namespace ForWinQuant
                 {
                     updateUI("开始刷单", "buttonMine");
                     this.initStates = 1;
+                    this.timerInit.Stop();
                     return;
                 }
 
@@ -150,25 +184,57 @@ namespace ForWinQuant
                     //NGRC有可卖资产
                     if (ngrc_amount > ngrc_frozen)
                     {
-                        var ask_quantity = (ngrc_amount - ngrc_frozen) > (MAX_TRADE_COUNT - countTradeToday) ? (MAX_TRADE_COUNT - countTradeToday) : (ngrc_amount - ngrc_frozen);
-
-                        var askResult = await EunexHelper.CreateOrder("asks", new PostOrder { pairSymbol = "7xjyKr", price = ngrc_price, quantity = ask_quantity });
-                        if (askResult.code == 0) countTradeToday += ask_quantity;
+                        float ask_quantity = (ngrc_amount - ngrc_frozen) > (MAX_TRADE_COUNT - countTradeToday) ? (MAX_TRADE_COUNT - countTradeToday) : (ngrc_amount - ngrc_frozen) ;
+                        
+                        await delayedRequest();
+                        PostOrder order = new PostOrder { pairSymbol = "7xjyKr", price = ngrc_price, quantity = (float)Math.Floor(ask_quantity * 10000) / 10000 };
+                        var askResult = await EunexHelper.CreateOrder("asks", order);
+                        requestSates = RequestSatesCode.STOP;
+                        lastRequestTime = DateTimeOffset.Now;
+                        if (askResult.code == 0) 
+                        { 
+                            await delayedRequest();
+                            var askOrderResult = await EunexHelper.GetOrder(askResult.data["orderId"].ToString());
+                            requestSates = RequestSatesCode.STOP;
+                            lastRequestTime = DateTimeOffset.Now;
+                            if (askOrderResult.code == 0)
+                            {
+                                if (!userOrders.Contains(askOrderResult.data)) userOrders.Add(askOrderResult.data);
+                            }
+                        }
                     }
-                    await Task.Delay(TimeSpan.FromSeconds(5));
+                    
                     if (usdt_amount > usdt_frozen)
                     {
                         var bid_quantity = (usdt_amount - usdt_frozen) / ngrc_price > (MAX_TRADE_COUNT - countTradeToday) ? (MAX_TRADE_COUNT - countTradeToday) : ((usdt_amount - usdt_frozen) / ngrc_price);
-                        var bidResult = await EunexHelper.CreateOrder("bids", new PostOrder { pairSymbol = "7xjyKr", price = ngrc_price, quantity = bid_quantity });
-                        if (bidResult.code == 0) countTradeToday += bid_quantity;
+                        await delayedRequest();
+                        var bidResult = await EunexHelper.CreateOrder("bids", new PostOrder { pairSymbol = "7xjyKr", price = ngrc_price, quantity = (float)Math.Floor(bid_quantity * 10000) / 10000 });
+                        requestSates = RequestSatesCode.STOP;
+                        lastRequestTime = DateTimeOffset.Now;
+                        if (bidResult.code == 0) 
+                        { 
+                            countTradeToday += bid_quantity;
+                            await delayedRequest();
+                            var bidOrderResult = await EunexHelper.GetOrder(bidResult.data["orderId"].ToString());
+                            requestSates = RequestSatesCode.STOP;
+                            lastRequestTime = DateTimeOffset.Now;
+                            if (bidOrderResult.code == 0)
+                            {
+                                if (!userOrders.Contains(bidOrderResult.data)) userOrders.Add(bidOrderResult.data);
+                            }
+                        }
                     }
-                    await Task.Delay(TimeSpan.FromSeconds(5));
+                    
 
                 }
             }
             catch(Exception e)
             {
                 MessageBox.Show(e.Message,"错误");
+            }
+            finally
+            {
+                requestSates = RequestSatesCode.STOP;
             }
            
 
@@ -182,6 +248,18 @@ namespace ForWinQuant
             this.timerAction.Enabled = false;
             actionStates = -1;
             updateUI("开始刷单", "buttonMine");
+        }
+
+        /// <summary>
+        /// 计算上次请求完成时间与现在时间差，如果小于5秒则延时到5秒，否则直接执行新请求
+        /// </summary>
+        private async Task delayedRequest()
+        {
+            while (requestSates != RequestSatesCode.STOP)
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            requestSates = RequestSatesCode.RUNING;
+            await Task.Delay(TimeSpan.FromSeconds(DateTimeOffset.Now.Subtract(lastRequestTime).TotalSeconds < 5 
+                ? (5 - DateTimeOffset.Now.Subtract(lastRequestTime).TotalSeconds) : 0));
         }
 
         private async void getUserBalances(string key, string secret)
@@ -272,11 +350,12 @@ namespace ForWinQuant
                 if (countTradeToday >= MAX_TRADE_COUNT)
                 {
                     timerAction.Enabled = false;
+                    stopAction();
                     MessageBox.Show("你今日的刷单总量已达单日最大刷单量（240000），请于明日再刷单。", "提示");
                     return;
                 }
                 timerAction.Enabled = true;
-                
+                eunexAction();
                 buttonMine.Text = "停止刷单";
             }
             else if (buttonMine.Text == "初始化") 
@@ -305,8 +384,11 @@ namespace ForWinQuant
                 //getUserList();
                 buttonMine.Text = "初始化";
                 this.initStates = 0;
+                eunexAction();
+                this.timerInit.Start();
             }
         }
+
 
         private async void getUserList()
         {
@@ -333,6 +415,7 @@ namespace ForWinQuant
                 Console.WriteLine("{}错误:"+e.Message, "getUserList");
             }
         }
+
 
         public async void debugTest()
         {
@@ -434,8 +517,6 @@ namespace ForWinQuant
                     {
                         buttonMine.Text = value;
                     }
-                    break;
-                case "2":
                     break;
                 case "3":
                     break;
@@ -574,9 +655,37 @@ namespace ForWinQuant
             new Thread(new ThreadStart(eunexAction)).Start();
         }
 
-        private void timerDebug_Tick(object sender, EventArgs e)
+        private void timerInit_Tick(object sender, EventArgs e)
         {
-            new Thread(new ThreadStart(debugTest)).Start();
+            new Thread(new ThreadStart(eunexAction)).Start();
+
+        }
+
+        private void dataGridViewUserOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewUserOrder.Columns[e.ColumnIndex].Name == "orderRevert" && e.RowIndex >= 0)
+            {
+                var row = dataGridViewUserOrder.Rows[e.RowIndex];
+                var cellOrderId = row.Cells["orderId"].Value.ToString();
+
+                cancelOrder(cellOrderId);
+            }
+        }
+
+        private async void cancelOrder(string orderId)
+        {
+            await delayedRequest();
+            var revertOrderResult = await EunexHelper.CancelOrder(orderId);
+            requestSates = RequestSatesCode.STOP;
+            lastRequestTime = DateTimeOffset.Now;
+            if (revertOrderResult.code == 0)
+            {
+                MessageBox.Show(revertOrderResult.data.ToString(), "撤单成功");
+            }
+            else
+            {
+                MessageBox.Show(revertOrderResult.data.ToString(), "撤单失败");
+            }
         }
     }
 }
