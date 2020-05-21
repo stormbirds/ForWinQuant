@@ -74,6 +74,7 @@ namespace ForWinQuant
             catch (JsonReaderException e)
             {
                 code = -1;
+                Console.WriteLine(e.Message);
             }
             return code;
         }

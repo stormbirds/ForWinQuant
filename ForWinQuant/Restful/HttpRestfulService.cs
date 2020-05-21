@@ -157,8 +157,8 @@ namespace ForWinQuant
         public static async Task<HttpResponseMessage> HandleHttpIO(HttpRequestMessage request, HttpResponseMessage response)
         {
             Console.Write("request url: " + request.RequestUri.ToString());
-            var res = "";
-            res = await response.Content.ReadAsStringAsync();
+
+            var res = await response.Content.ReadAsStringAsync();
             Console.Write("response data: " + res);
             if (response.StatusCode != HttpStatusCode.OK)
             {
