@@ -1,4 +1,6 @@
-﻿using ForWinQuant.Helper;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using ForWinQuant.Helper;
 using ForWinQuant.Restful;
 using Newtonsoft.Json.Linq;
 using Refit;
@@ -9,6 +11,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -55,7 +58,8 @@ namespace ForWinQuant
         /// <summary>
         /// 用户订单列表，用于图表展示
         /// </summary>
-        private BindingList<Order> userOrders ; 
+        private BindingList<Order> userOrders ;
+        private ChromiumWebBrowser chromeBrowser;
 
         public delegate void RefreshChartDelegate(List<int> x, List<int> y, string type);
         delegate void SetTextCallback(string value , string uiName);
@@ -64,7 +68,27 @@ namespace ForWinQuant
             InitializeComponent();
 
             init();
-            
+            InitializeChromium();
+        }
+        //初始化浏览器并启动
+        public void InitializeChromium()
+        {
+            CefSettings settings = new CefSettings();
+            // Initialize cef with the provided settings
+            Cef.Initialize(settings);
+            // Create a browser component
+            chromeBrowser = new ChromiumWebBrowser("https://eunex.co/exchange/7xjyKr");
+            chromeBrowser.FrameLoadEnd += ChromeBrowser_FrameLoadEnd;
+
+            // Add it to the form and fill it to the form window.
+            this.tabPagePrice.Controls.Add(chromeBrowser);
+            chromeBrowser.Dock = DockStyle.Fill;
+        }
+
+
+        private void ChromeBrowser_FrameLoadEnd(object sender, FrameLoadEndEventArgs e)
+        {
+            chromeBrowser.ExecuteScriptAsync("document.getElementsByClassName('Tradebanner')[0].style.display='none';document.getElementById('trade_plane').style.display = 'none';document.getElementsByClassName('chart-order')[0].style.display = 'none'; ");
         }
 
         public void init()
@@ -376,16 +400,16 @@ namespace ForWinQuant
         /// <param name="logged"></param>
         public void loginStatusChanged(string username, bool logged)
         {
-            toolStripStatusLabelLogin.Text = logged ? username + " 已登录 " : username + "登录失败";
+            toolStripStatusLabelLogin.Text = logged ? username + " 已登录 " : username + "退出登录";
             labelUserName.Text = string.Format("账户：{0}", username);
             toolStripStatusLabelLogin.ForeColor = logged ? Color.Green : Color.Red;
             if (logged)
             {
-                //getUserList();
                 buttonMine.Text = "初始化";
                 this.initStates = 0;
-                eunexAction();
+                
                 this.timerInit.Start();
+                getUserList();
             }
         }
 
@@ -396,18 +420,23 @@ namespace ForWinQuant
             try {
                 
                 await Task.Delay(TimeSpan.FromSeconds(3));
-                getUserBalances(HttpRestfulService.API_KEY, HttpRestfulService.API_SECRET);
+                eunexAction();
 #else
             var api = HttpRestfulService.ForBaseApi<IUserApi>();
             try
             {
                 var resJson = await api.GetEunexUsers();
                 var listUser = resJson.data;
-                Console.WriteLine(listUser.Count);
-                HttpRestfulService.API_KEY = listUser[0].api_key;
-                HttpRestfulService.API_SECRET = listUser[0].api_secret;
-                labelUserName.Text = string.Format("账户：{0}",listUser[0].eunex_name) ;
-                getUserBalances(listUser[0].api_key, listUser[0].api_secret);
+                if (listUser.Count > 0)
+                {
+                    HttpRestfulService.API_KEY = listUser[0].api_key;
+                    HttpRestfulService.API_SECRET = listUser[0].api_secret;
+                    labelUserName.Text = string.Format("欧联账户：{0}", listUser[0].eunex_name);
+                    eunexAction();
+                }
+                else {
+                    MessageBox.Show("该账户下没有欧联账户，请先新建欧联账户后再重试。", "警告");
+                }
 #endif
             }
             catch(Exception e)
@@ -687,5 +716,7 @@ namespace ForWinQuant
                 MessageBox.Show(revertOrderResult.data.ToString(), "撤单失败");
             }
         }
+
+       
     }
 }
