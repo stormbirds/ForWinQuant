@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.button_login = new System.Windows.Forms.Button();
-            this.buttonRegister = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBoxFixedPassword = new System.Windows.Forms.CheckBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,10 +94,9 @@
             // 
             // button_login
             // 
-            this.button_login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_login.Location = new System.Drawing.Point(85, 153);
+            this.button_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.button_login, 3);
+            this.button_login.Location = new System.Drawing.Point(154, 153);
             this.button_login.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(66, 24);
@@ -102,19 +104,6 @@
             this.button_login.Text = "登录";
             this.button_login.UseVisualStyleBackColor = true;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
-            // 
-            // buttonRegister
-            // 
-            this.buttonRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRegister.Location = new System.Drawing.Point(223, 153);
-            this.buttonRegister.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(67, 24);
-            this.buttonRegister.TabIndex = 5;
-            this.buttonRegister.Text = "注册";
-            this.buttonRegister.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -129,7 +118,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button_login, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox_password, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.buttonRegister, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxFixedPassword, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -143,19 +132,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(376, 222);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
+            // checkBoxFixedPassword
+            // 
+            this.checkBoxFixedPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkBoxFixedPassword.AutoSize = true;
+            this.checkBoxFixedPassword.Location = new System.Drawing.Point(78, 127);
+            this.checkBoxFixedPassword.Name = "checkBoxFixedPassword";
+            this.checkBoxFixedPassword.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.checkBoxFixedPassword.Size = new System.Drawing.Size(75, 16);
+            this.checkBoxFixedPassword.TabIndex = 6;
+            this.checkBoxFixedPassword.Text = "记住密码";
+            this.checkBoxFixedPassword.UseVisualStyleBackColor = true;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 231);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "登录";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
+
         #endregion
 
         private System.Windows.Forms.TextBox textBox_username;
@@ -163,7 +172,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.CheckBox checkBoxFixedPassword;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

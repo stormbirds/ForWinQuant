@@ -72,5 +72,7 @@ namespace ForWinQuant
                 return ex.Message;
             }
         }
+
+        
     }
 }

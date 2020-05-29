@@ -61,12 +61,48 @@ namespace ForWinQuant.Properties {
         }
         
         /// <summary>
+        ///   查找类似 下载失败 的本地化字符串。
+        /// </summary>
+        internal static string DownLoadFail {
+            get {
+                return ResourceManager.GetString("DownLoadFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 新版本 的本地化字符串。
+        /// </summary>
+        internal static string NewVersion {
+            get {
+                return ResourceManager.GetString("NewVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 开始刷单 的本地化字符串。
+        /// </summary>
+        internal static string StartAction {
+            get {
+                return ResourceManager.GetString("StartAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 停止刷单 的本地化字符串。
+        /// </summary>
+        internal static string StopAction {
+            get {
+                return ResourceManager.GetString("StopAction", resourceCulture);
             }
         }
         

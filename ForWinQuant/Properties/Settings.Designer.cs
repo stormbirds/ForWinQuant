@@ -25,7 +25,7 @@ namespace ForWinQuant.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("aaa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -44,6 +44,30 @@ namespace ForWinQuant.Properties {
             }
             set {
                 this["access_token"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string password {
+            get {
+                return ((string)(this["password"]));
+            }
+            set {
+                this["password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autoLogin {
+            get {
+                return ((bool)(this["autoLogin"]));
+            }
+            set {
+                this["autoLogin"] = value;
             }
         }
     }

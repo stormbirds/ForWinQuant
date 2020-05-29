@@ -40,27 +40,24 @@ namespace ForWinQuant
         const string MembersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/members";
         const string OrdersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/orders";
         const string TestServerUrl = "http://111.229.228.244:8000";
-        public static string API_KEY = "KqtRQAwWjlqEnS8v";
-        public static string API_SECRET = "07OojLSkmAGdiPwm";
+        const string StormBirdsUrl = "https://tool.stormbirds.cn";
+        //public static string API_KEY = "KqtRQAwWjlqEnS8v";
+        //public static string API_SECRET = "07OojLSkmAGdiPwm";
 
         public static string Access_Token = "";
 
-        static readonly TimeSpan RequestTimeout = TimeSpan.FromDays(1);
+        static readonly TimeSpan RequestTimeout = TimeSpan.FromSeconds(15);
 
-        public static T ForMembersApi<T>()
-        {
-            //return RestService.For<T>(MembersEunexUrl);
-            return RestService.For<T>(
-              new HttpClient(new MembersHttpClientHandler())
-              {
-                  BaseAddress = new Uri(MembersEunexUrl),
-                  Timeout = RequestTimeout
-              },
-              new RefitSettings()
-              {
-                  ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
-              });
-        }
+        public enum RequestSatesCode { STOP, RUNING }
+        /// <summary>
+        /// 欧联接口上次请求时间
+        /// </summary>
+        public static DateTimeOffset lastRequestTime = DateTimeOffset.Now;
+
+        /// <summary>
+        /// 欧联接口请求状态，用于保证每次接口请求间隔超过5秒
+        /// </summary>
+        public static RequestSatesCode requestSates = RequestSatesCode.STOP;
 
         public static T ForBaseApi<T>()
         {
@@ -92,14 +89,26 @@ namespace ForWinQuant
                       {
                           ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
                       });
-
+                case "IUpdateApi":
+                    base_url = StormBirdsUrl;
+                    return RestService.For<T>(
+                      new HttpClient(new UserHttpClientHandler())
+                      {
+                          BaseAddress = new Uri(base_url),
+                          Timeout = RequestTimeout
+                      },
+                      new RefitSettings()
+                      {
+                          ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
+                      });
+                    break;
                 default:
                     base_url = TestServerUrl;
                     break;
             }
 
             return RestService.For<T>(
-              new HttpClient(new MembersHttpClientHandler())
+              new HttpClient(new EunexHttpClientHandler())
               {
                   BaseAddress = new Uri(base_url),
                   Timeout = RequestTimeout
@@ -116,10 +125,18 @@ namespace ForWinQuant
             Dictionary<string, string> dic = new Dictionary<string, string>();
             query = query.Substring(1, query.Length - 1);
             string[] kv = query.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            string secretKey = "";
             foreach (string item in kv)
             {
-                string[] kv2 = item.Split(new char[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
-                dic.Add(kv2[0], kv2[1]);
+                if (!item.StartsWith("secret_key=")) {
+                    string[] kv2 = item.Split(new char[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+                    dic.Add(kv2[0], kv2[1]);
+                }
+                else
+                {
+                    secretKey = item;
+                }
+                
             }
 
             IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(dic);
@@ -131,10 +148,24 @@ namespace ForWinQuant
                 else
                     basestring.Append(sortedParams.ToList()[i].Key).Append("=").Append(sortedParams.ToList()[i].Value);
             }
-            basestring.Append("&secret_key=").Append(API_SECRET);
+            basestring.Append("&").Append(secretKey);
             string result = basestring.ToString();
             result = Utils.Sha1Sign(result);
             return result;
+        }
+
+        public static string formatUrl(string query)
+        {
+            query = query.Substring(1, query.Length - 1);
+            string[] kv = query.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string item in kv)
+            {
+                if (item.StartsWith("secret_key=")) {
+                    return "&" + item;
+                }
+            }
+            return "";
         }
 
         public static string getSign(Dictionary<string, string> dic)
@@ -148,7 +179,7 @@ namespace ForWinQuant
                 else
                     basestring.Append(sortedParams.ToList()[i].Key).Append("=").Append(sortedParams.ToList()[i].Value);
             }
-            basestring.Append("&secret_key=").Append(API_SECRET);
+            //basestring.Append("&secret_key=").Append(API_SECRET);
             string result = basestring.ToString();
             result = Utils.Sha1Sign(result);
             return result;
@@ -178,27 +209,45 @@ namespace ForWinQuant
                 request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(access_token);
             var response = await base.SendAsync(request, cancellationToken);
             var message = await HttpRestfulService.HandleHttpIO(request, response);
+            
             return message;
         }
     }
-    class MembersHttpClientHandler : HttpClientHandler
+    class EunexHttpClientHandler : HttpClientHandler
     {
+
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+
             if (request == null)
             {
                 return null;
             }
+            while (HttpRestfulService.requestSates != HttpRestfulService.RequestSatesCode.STOP)
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            HttpRestfulService.requestSates = HttpRestfulService.RequestSatesCode.RUNING;
+            await Task.Delay(TimeSpan.FromSeconds(DateTimeOffset.Now.Subtract(HttpRestfulService.lastRequestTime).TotalSeconds < 5
+                ? (5 - DateTimeOffset.Now.Subtract(HttpRestfulService.lastRequestTime).TotalSeconds) : 0));
+
             var timestamp = Utils.GetTimeStampMilliseconds().ToString();
             var originUri = request.RequestUri.AbsoluteUri;
 
+            
+
             originUri = string.IsNullOrWhiteSpace( request.RequestUri.Query) ? (originUri + "?") : (originUri + "&");
-            var custemUri = new Uri(string.Format("{0}api_id={1}&timestamp={2}", originUri, HttpRestfulService.API_KEY, timestamp));
+            var custemUri = new Uri(string.Format("{0}timestamp={1}", originUri, timestamp));
+            string formatUrl = custemUri.AbsoluteUri.Replace(
+                HttpRestfulService.formatUrl(request.RequestUri.Query), "");
+            request.RequestUri = new Uri(formatUrl + "&sign=" + HttpRestfulService.getSign(custemUri.Query));
 
-            request.RequestUri = new Uri(custemUri.AbsoluteUri + "&sign=" + HttpRestfulService.getSign(custemUri.Query));
-
+            AppUtils.mainForm.updateUI("", "requestStart");
             var response = await base.SendAsync(request, cancellationToken);
+
+            HttpRestfulService.lastRequestTime = DateTimeOffset.Now;
+            HttpRestfulService.requestSates = HttpRestfulService.RequestSatesCode.STOP;
+
             var message = await HttpRestfulService.HandleHttpIO(request, response);
+            AppUtils.mainForm.updateUI("", "requestEnd");
             return message;
         }
     }

@@ -3,10 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">aaa</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="access_token" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="autoLogin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

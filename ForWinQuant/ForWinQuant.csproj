@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.props')" />
-  <Import Project="..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props')" />
-  <Import Project="..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props')" />
-  <Import Project="..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -18,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,7 +70,7 @@
     <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
@@ -78,9 +89,6 @@
     </Reference>
     <Reference Include="Refit, Version=5.1.0.0, Culture=neutral, PublicKeyToken=2f9b1262776509f5, processorArchitecture=MSIL">
       <HintPath>..\packages\Refit.5.1.67\lib\net461\Refit.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=106.11.3.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.106.11.3\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -191,7 +199,11 @@
     </Compile>
     <Compile Include="Helper\ChartHelper.cs" />
     <Compile Include="Helper\EunexHelper.cs" />
+    <Compile Include="Helper\LogLevel.cs" />
+    <Compile Include="Helper\Log.cs" />
+    <Compile Include="Model\AppVersion.cs" />
     <Compile Include="Model\EunexUser.cs" />
+    <Compile Include="Model\UserConfig.cs" />
     <Compile Include="Restful\HttpRestfulService.cs" />
     <Compile Include="Restful\IBaseApi.cs" />
     <Compile Include="Restful\IMarketApi.cs" />
@@ -203,7 +215,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuantApi.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,15 +223,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuantAuth.cs" />
+    <Compile Include="Restful\IUpdateApi.cs" />
     <Compile Include="Restful\IUserApi.cs" />
     <Compile Include="Restful\Restful.cs" />
     <Compile Include="Helper\Utils.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormWait.resx">
       <DependentUpon>FormWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en-US.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -235,6 +256,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -255,6 +279,18 @@
   <ItemGroup>
     <None Include="Resources\用户.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Refit.5.1.67\build\net461\refit.targets" Condition="Exists('..\packages\Refit.5.1.67\build\net461\refit.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -262,13 +298,5 @@
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Refit.5.1.67\build\net461\refit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Refit.5.1.67\build\net461\refit.targets'))" />
-    <Error Condition="!Exists('..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props'))" />
-    <Error Condition="!Exists('..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props'))" />
-    <Error Condition="!Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props'))" />
-    <Error Condition="!Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets'))" />
-    <Error Condition="!Exists('..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.props'))" />
-    <Error Condition="!Exists('..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.targets'))" />
   </Target>
-  <Import Project="..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets')" />
-  <Import Project="..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.79.1.360\build\CefSharp.WinForms.targets')" />
 </Project>

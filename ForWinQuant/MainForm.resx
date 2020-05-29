@@ -117,84 +117,1836 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="orderRevert.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="orderId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="orderKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="memberId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="memberKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="usr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clientId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="orderType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pairCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tradeCoinKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="priceCoinKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="priceType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lastQuantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="orderStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="matched.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="createdAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="icon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fee.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="amounts.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="avgPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lastModifiedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="version.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="mainStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>162, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mainStatusStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripStatusLabelLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="toolStripStatusLabelLogin.Text" xml:space="preserve">
+    <value>未登录</value>
+  </data>
+  <data name="toolStripProgressBarRequest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripProgressBarRequest.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripStatusLabelStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="toolStripStatusLabelStatus.Text" xml:space="preserve">
+    <value> 状态 准备就绪 </value>
+  </data>
+  <data name="toolStripStatusLabelAssetUpdateTime.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="toolStripStatusLabelAssetUpdateTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 17</value>
+  </data>
+  <data name="toolStripStatusLabelAssetUpdateTime.Text" xml:space="preserve">
+    <value>资产数据最后更新时间：10:30:00</value>
+  </data>
+  <data name="mainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainStatusStrip.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="mainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 22</value>
+  </data>
+  <data name="mainStatusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="mainStatusStrip.Text" xml:space="preserve">
+    <value>状态栏</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Name" xml:space="preserve">
+    <value>mainStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.Parent" xml:space="preserve">
+    <value>toolStripContainer1.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;mainStatusStrip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="toolStripContainer1.ContentPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="treeViewSubUsers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeViewSubUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="treeViewSubUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 564</value>
+  </data>
+  <data name="treeViewSubUsers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeViewSubUsers.Name" xml:space="preserve">
+    <value>treeViewSubUsers</value>
+  </data>
+  <data name="&gt;&gt;treeViewSubUsers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeViewSubUsers.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;treeViewSubUsers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerMine.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerMine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="textBoxLog.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBoxLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="textBoxLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>577, 150</value>
+  </data>
+  <data name="textBoxLog.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBoxLog.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textBoxLog.Name" xml:space="preserve">
+    <value>textBoxLog</value>
+  </data>
+  <data name="&gt;&gt;textBoxLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLog.Parent" xml:space="preserve">
+    <value>groupBoxExecutionLog</value>
+  </data>
+  <data name="&gt;&gt;textBoxLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxExecutionLog.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBoxExecutionLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 391</value>
+  </data>
+  <data name="groupBoxExecutionLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 170</value>
+  </data>
+  <data name="groupBoxExecutionLog.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBoxExecutionLog.Text" xml:space="preserve">
+    <value>执行日志</value>
+  </data>
+  <data name="&gt;&gt;groupBoxExecutionLog.Name" xml:space="preserve">
+    <value>groupBoxExecutionLog</value>
+  </data>
+  <data name="&gt;&gt;groupBoxExecutionLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxExecutionLog.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxExecutionLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="orderRevert.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="orderRevert.HeaderText" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="orderRevert.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderRevert.Width" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="id.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="id.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="id.Width" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <metadata name="orderId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="orderId.HeaderText" xml:space="preserve">
+    <value>订单ID</value>
+  </data>
+  <data name="orderId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderId.Width" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <metadata name="orderKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="orderKey.HeaderText" xml:space="preserve">
+    <value>订单Key</value>
+  </data>
+  <data name="orderKey.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderKey.Width" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <metadata name="memberId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="memberId.HeaderText" xml:space="preserve">
+    <value>用户ID</value>
+  </data>
+  <data name="memberId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="memberId.Width" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <metadata name="memberKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="memberKey.HeaderText" xml:space="preserve">
+    <value>用户Key</value>
+  </data>
+  <data name="memberKey.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="memberKey.Width" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <metadata name="usr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="usr.HeaderText" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="usr.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="usr.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="clientId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="clientId.HeaderText" xml:space="preserve">
+    <value>平台途径</value>
+  </data>
+  <data name="clientId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clientId.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="orderType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="orderType.HeaderText" xml:space="preserve">
+    <value>订单类型</value>
+  </data>
+  <data name="orderType.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="pairCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="pairCode.HeaderText" xml:space="preserve">
+    <value>交易对码</value>
+  </data>
+  <data name="pairCode.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pairCode.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="tradeCoinKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tradeCoinKey.HeaderText" xml:space="preserve">
+    <value>tradeCoinKey</value>
+  </data>
+  <data name="tradeCoinKey.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tradeCoinKey.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <metadata name="priceCoinKey.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="priceCoinKey.HeaderText" xml:space="preserve">
+    <value>priceCoinKey</value>
+  </data>
+  <data name="priceCoinKey.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="priceCoinKey.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <metadata name="priceType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="priceType.HeaderText" xml:space="preserve">
+    <value>币种</value>
+  </data>
+  <data name="priceType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="priceType.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="price.HeaderText" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="price.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="quantity.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="quantity.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="lastQuantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lastQuantity.HeaderText" xml:space="preserve">
+    <value>lastQuantity</value>
+  </data>
+  <data name="lastQuantity.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lastQuantity.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <metadata name="orderStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="orderStatus.HeaderText" xml:space="preserve">
+    <value>订单状态</value>
+  </data>
+  <data name="orderStatus.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="matched.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="matched.HeaderText" xml:space="preserve">
+    <value>matched</value>
+  </data>
+  <data name="matched.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="matched.Width" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <metadata name="createdAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="createdAt.HeaderText" xml:space="preserve">
+    <value>创建时间</value>
+  </data>
+  <data name="createdAt.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="icon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="icon.HeaderText" xml:space="preserve">
+    <value>icon</value>
+  </data>
+  <data name="icon.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="icon.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="fee.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="fee.HeaderText" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="fee.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="amounts.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="amounts.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="amounts.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <metadata name="avgPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="avgPrice.HeaderText" xml:space="preserve">
+    <value>平均价格</value>
+  </data>
+  <data name="avgPrice.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <metadata name="lastModifiedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lastModifiedAt.HeaderText" xml:space="preserve">
+    <value>上次修改时间</value>
+  </data>
+  <data name="lastModifiedAt.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lastModifiedAt.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <metadata name="version.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="version.HeaderText" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="version.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="version.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="dataGridViewUserOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridViewUserOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="dataGridViewUserOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>577, 170</value>
+  </data>
+  <data name="dataGridViewUserOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewUserOrder.Name" xml:space="preserve">
+    <value>dataGridViewUserOrder</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewUserOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewUserOrder.Parent" xml:space="preserve">
+    <value>groupBoxDelegateList</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewUserOrder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxDelegateList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBoxDelegateList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 195</value>
+  </data>
+  <data name="groupBoxDelegateList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 190</value>
+  </data>
+  <data name="groupBoxDelegateList.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBoxDelegateList.Text" xml:space="preserve">
+    <value>委托列表</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDelegateList.Name" xml:space="preserve">
+    <value>groupBoxDelegateList</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDelegateList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDelegateList.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDelegateList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SynchronizeAdvancedSettings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SynchronizeAdvancedSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 0</value>
+  </data>
+  <data name="SynchronizeAdvancedSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 12</value>
+  </data>
+  <data name="SynchronizeAdvancedSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="SynchronizeAdvancedSettings.Text" xml:space="preserve">
+    <value>同步当前设置</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettings.Name" xml:space="preserve">
+    <value>SynchronizeAdvancedSettings</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettings.Parent" xml:space="preserve">
+    <value>groupBoxAdvancedSettings</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>411, 71</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 16</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.Text" xml:space="preserve">
+    <value>掉线提示音</value>
+  </data>
+  <data name="checkBoxOfflinePrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;checkBoxOfflinePrompt.Name" xml:space="preserve">
+    <value>checkBoxOfflinePrompt</value>
+  </data>
+  <data name="&gt;&gt;checkBoxOfflinePrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxOfflinePrompt.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxOfflinePrompt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 13</value>
+  </data>
+  <data name="label8.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 10, 0, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 26</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>~</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceStart.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceStart.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceStart.Name" xml:space="preserve">
+    <value>dateTimePickerLateHighPriceStart</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceStart.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceStart.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBoxTwoHigherPrices.Text" xml:space="preserve">
+    <value>高二价</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTwoHigherPrices.Name" xml:space="preserve">
+    <value>checkBoxTwoHigherPrices</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTwoHigherPrices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTwoHigherPrices.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTwoHigherPrices.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 56</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkBoxEarlyHighPrice.Text" xml:space="preserve">
+    <value>早高价</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>765, 17</value>
+  </metadata>
+  <data name="checkBoxEarlyHighPrice.ToolTip" xml:space="preserve">
+    <value>区间内时间可任意设置，设置价格区间内的挂卖单会跳高一个价位。（用于下午跳晚上21:00后的价格）</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEarlyHighPrice.Name" xml:space="preserve">
+    <value>checkBoxEarlyHighPrice</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEarlyHighPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEarlyHighPrice.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEarlyHighPrice.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxLateHighPrice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxLateHighPrice.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="checkBoxLateHighPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="checkBoxLateHighPrice.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="checkBoxLateHighPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="checkBoxLateHighPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxLateHighPrice.Text" xml:space="preserve">
+    <value>晚高价</value>
+  </data>
+  <data name="&gt;&gt;checkBoxLateHighPrice.Name" xml:space="preserve">
+    <value>checkBoxLateHighPrice</value>
+  </data>
+  <data name="&gt;&gt;checkBoxLateHighPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxLateHighPrice.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxLateHighPrice.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceStart.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 122</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceStart.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceStart.Name" xml:space="preserve">
+    <value>dateTimePickerTwoHigherPriceStart</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceStart.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceStart.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceStart.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 69</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceStart.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceStart.Name" xml:space="preserve">
+    <value>dateTimePickerEarlyHighPriceStart</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceStart.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceStart.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceEnd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceEnd.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 16</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerLateHighPriceEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceEnd.Name" xml:space="preserve">
+    <value>dateTimePickerLateHighPriceEnd</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceEnd.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerLateHighPriceEnd.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceEnd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceEnd.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 69</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerEarlyHighPriceEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceEnd.Name" xml:space="preserve">
+    <value>dateTimePickerEarlyHighPriceEnd</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceEnd.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerEarlyHighPriceEnd.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceEnd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceEnd.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 122</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="dateTimePickerTwoHigherPriceEnd.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceEnd.Name" xml:space="preserve">
+    <value>dateTimePickerTwoHigherPriceEnd</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceEnd.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dateTimePickerTwoHigherPriceEnd.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 66</value>
+  </data>
+  <data name="label7.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 10, 0, 0</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 26</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>~</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 119</value>
+  </data>
+  <data name="label1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 10, 0, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 26</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>~</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="checkBoxDealPrompt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="checkBoxDealPrompt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxDealPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>411, 18</value>
+  </data>
+  <data name="checkBoxDealPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 16</value>
+  </data>
+  <data name="checkBoxDealPrompt.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="checkBoxDealPrompt.Text" xml:space="preserve">
+    <value>成交提示音</value>
+  </data>
+  <data name="checkBoxDealPrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDealPrompt.Name" xml:space="preserve">
+    <value>checkBoxDealPrompt</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDealPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDealPrompt.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDealPrompt.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 21</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="numericUpDownRetainedAmount.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownRetainedAmount.Name" xml:space="preserve">
+    <value>numericUpDownRetainedAmount</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownRetainedAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownRetainedAmount.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownRetainedAmount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>留</value>
+  </data>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 17</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>USDT</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 109</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 47</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 14</value>
+  </data>
+  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>550, 159</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>groupBoxAdvancedSettings</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="checkBoxOfflinePrompt" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerLateHighPriceStart" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="checkBoxTwoHigherPrices" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="checkBoxEarlyHighPrice" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="checkBoxLateHighPrice" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerTwoHigherPriceStart" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerEarlyHighPriceStart" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerLateHighPriceEnd" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerEarlyHighPriceEnd" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="dateTimePickerTwoHigherPriceEnd" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="checkBoxDealPrompt" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel2" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,20,Percent,5,Percent,20,Percent,35" /&gt;&lt;Rows Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="groupBoxAdvancedSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBoxAdvancedSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBoxAdvancedSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 186</value>
+  </data>
+  <data name="groupBoxAdvancedSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupBoxAdvancedSettings.Text" xml:space="preserve">
+    <value>高级设置</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAdvancedSettings.Name" xml:space="preserve">
+    <value>groupBoxAdvancedSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAdvancedSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAdvancedSettings.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAdvancedSettings.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 564</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>splitContainerMine.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBoxExecutionLog" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxDelegateList" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxAdvancedSettings" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,49.6063,Percent,50.3937,Absolute,175" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel1.Name" xml:space="preserve">
+    <value>splitContainerMine.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerMine</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonMine.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonMine.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonMine.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="buttonMine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 480</value>
+  </data>
+  <data name="buttonMine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 40</value>
+  </data>
+  <data name="buttonMine.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="buttonMine.Text" xml:space="preserve">
+    <value>开始刷单</value>
+  </data>
+  <data name="&gt;&gt;buttonMine.Name" xml:space="preserve">
+    <value>buttonMine</value>
+  </data>
+  <data name="&gt;&gt;buttonMine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMine.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;buttonMine.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_NGRC_value.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_NGRC_value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="label_NGRC_value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 371</value>
+  </data>
+  <data name="label_NGRC_value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 14</value>
+  </data>
+  <data name="label_NGRC_value.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label_NGRC_value.Text" xml:space="preserve">
+    <value>可用--，冻结--</value>
+  </data>
+  <data name="&gt;&gt;label_NGRC_value.Name" xml:space="preserve">
+    <value>label_NGRC_value</value>
+  </data>
+  <data name="&gt;&gt;label_NGRC_value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_NGRC_value.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label_NGRC_value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt, style=Bold</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 346</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 14</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>NGRC</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_USDT_value.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_USDT_value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="label_USDT_value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 320</value>
+  </data>
+  <data name="label_USDT_value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 14</value>
+  </data>
+  <data name="label_USDT_value.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label_USDT_value.Text" xml:space="preserve">
+    <value>可用--，冻结--</value>
+  </data>
+  <data name="&gt;&gt;label_USDT_value.Name" xml:space="preserve">
+    <value>label_USDT_value</value>
+  </data>
+  <data name="&gt;&gt;label_USDT_value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_USDT_value.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label_USDT_value.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt, style=Bold</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 295</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 14</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>USDT</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelCountTradeToday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCountTradeToday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="labelCountTradeToday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 240</value>
+  </data>
+  <data name="labelCountTradeToday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 14</value>
+  </data>
+  <data name="labelCountTradeToday.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelCountTradeToday.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;labelCountTradeToday.Name" xml:space="preserve">
+    <value>labelCountTradeToday</value>
+  </data>
+  <data name="&gt;&gt;labelCountTradeToday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCountTradeToday.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;labelCountTradeToday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10pt</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 215</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 14</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>今日已刷(完成进度)</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelTodayRound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTodayRound.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="labelTodayRound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 180</value>
+  </data>
+  <data name="labelTodayRound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 14</value>
+  </data>
+  <data name="labelTodayRound.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelTodayRound.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;labelTodayRound.Name" xml:space="preserve">
+    <value>labelTodayRound</value>
+  </data>
+  <data name="&gt;&gt;labelTodayRound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTodayRound.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;labelTodayRound.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelCurrentPrice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCurrentPrice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 10pt</value>
+  </data>
+  <data name="labelCurrentPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 180</value>
+  </data>
+  <data name="labelCurrentPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 14</value>
+  </data>
+  <data name="labelCurrentPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelCurrentPrice.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentPrice.Name" xml:space="preserve">
+    <value>labelCurrentPrice</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentPrice.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentPrice.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10pt</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 155</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 14</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>今日轮次</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10pt</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 155</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 14</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>当前价格</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 94</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>账号估值：</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 78</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>剩余矿源：</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 62</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>即将释放：</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labelUserName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 41</value>
+  </data>
+  <data name="labelUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="labelUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelUserName.Text" xml:space="preserve">
+    <value>账号：</value>
+  </data>
+  <data name="&gt;&gt;labelUserName.Name" xml:space="preserve">
+    <value>labelUserName</value>
+  </data>
+  <data name="&gt;&gt;labelUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelUserName.Parent" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;labelUserName.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="panelAction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="panelAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 544</value>
+  </data>
+  <data name="panelAction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelAction.Name" xml:space="preserve">
+    <value>panelAction</value>
+  </data>
+  <data name="&gt;&gt;panelAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelAction.Parent" xml:space="preserve">
+    <value>groupBoxAction</value>
+  </data>
+  <data name="&gt;&gt;panelAction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxAction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBoxAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBoxAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 564</value>
+  </data>
+  <data name="groupBoxAction.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBoxAction.Text" xml:space="preserve">
+    <value>操作区</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAction.Name" xml:space="preserve">
+    <value>groupBoxAction</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAction.Parent" xml:space="preserve">
+    <value>splitContainerMine.Panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel2.Name" xml:space="preserve">
+    <value>splitContainerMine.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerMine</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerMine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>896, 564</value>
+  </data>
+  <data name="splitContainerMine.SplitterDistance" type="System.Int32, mscorlib">
+    <value>589</value>
+  </data>
+  <data name="splitContainerMine.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Name" xml:space="preserve">
+    <value>splitContainerMine</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMine.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 564</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>164</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>toolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 564</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolStripContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="toolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 586</value>
+  </data>
+  <data name="toolStripContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolStripContainer1.Text" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Name" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="timerChart.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>307, 17</value>
   </metadata>
@@ -207,10 +1959,205 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>645, 17</value>
   </metadata>
+  <data name="menuMineToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="menuMineToolStripMenuItem.Text" xml:space="preserve">
+    <value>我的</value>
+  </data>
+  <data name="SynchronizeAdvancedSettingsMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 22</value>
+  </data>
+  <data name="SynchronizeAdvancedSettingsMenuItem.Text" xml:space="preserve">
+    <value>同步当前用户高级设置</value>
+  </data>
+  <data name="设置ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="设置ToolStripMenuItem.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 25</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BottomToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="BottomToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;BottomToolStripPanel.Name" xml:space="preserve">
+    <value>BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TopToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TopToolStripPanel.Name" xml:space="preserve">
+    <value>TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RightToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RightToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;RightToolStripPanel.Name" xml:space="preserve">
+    <value>RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LeftToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="LeftToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;LeftToolStripPanel.Name" xml:space="preserve">
+    <value>LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ContentPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 564</value>
+  </data>
+  <data name="&gt;&gt;ContentPanel.Name" xml:space="preserve">
+    <value>ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>866, 17</value>
+  </metadata>
+  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAACMuAAAjLgAAAAAAAAAA
+        AABKeekARnbpBEt66adjjez/cpju/3OY7v9zmO7/c5ju/3OY7v9zmO7/c5ju/3OY7v9zmO7/c5ju/3OY
+        7v9zmO7/c5ju/3OY7v9zmO7/c5ju/3OY7v9zmO7/c5ju/3OY7v9zmO7/c5ju/3OY7v9ymO7/Y4zs/0t6
+        6adGdukESnnpAEp56QAyZ+YJW4brwLHJ9v+lv/T/lLLy/5Sz8v+UsvL/lLLy/5Sy8v+UsvL/lLLy/5Sy
+        8v+UsvL/lLLy/5Sy8v+UsvL/lLLy/5Sy8v+UsvL/lLLy/5Sy8v+UsvL/lLLy/5Sy8v+Us/L/lLLy/6fB
+        9P+xyfX/W4brwDNn5glKeekASnnpACth5QlijOzAnbnz/1SB6v9JeOn/SXnp/0l56f9Jeen/SXnp/0l4
+        6f9JeOn/SXjp/0l46f9Jeen/SXnp/0l56f9Jeen/SXnp/0l56f9Jeen/SXnp/0l56f9Jeen/SXnp/0l5
+        6f9JeOn/VYHq/5668/9ijOzAK2HlCUp56QBKeekAK2HlCWOM7MCHqPD/Snnp/0p56f9Keen/Snnp/0l5
+        6f9IeOn/THvp/1B96v9Qfer/UH3q/0x66f9Keen/Snnp/0p56f9Keen/SHjp/0d36f9JeOn/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Jeen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIip8P9Keen/Snnp/0p5
+        6f9Jeen/U4Dq/5ey8v/E0/j/z9z5/9Hd+f+pwPX/U4Dq/0l56f9Keen/SXnp/36g7/+wxfX/jqzx/1uG
+        6/9IeOn/Snnp/0p56f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth5QljjOzAiKnw/0p5
+        6f9Keen/Snnp/0h46f+YsvL//P3/////////////9vn+/4Ch8P9IeOn/Snnp/0p56f9JeOn/ZY3s/+Hp
+        +///////1eD6/26U7f9IeOn/Snnp/0p56f9Keen/Snnp/4eo8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM
+        7MCIqfD/Snnp/0p56f9Keen/SXjp/7XJ9v///////v7////////Y4vr/VIDq/0l56f9Keen/Snnp/0p5
+        6f9Id+n/qb/1////////////09/6/1qF6/9JeOn/Snnp/0p56f9Keen/h6jw/2OM7MArYeUJSnnpAEp5
+        6QArYeUJY4zswIip8P9Keen/Snnp/0p56f9IeOn/qL/0/////////////////7jK9v9Leun/Snnp/0p5
+        6f9Keen/Snnp/0d36f+RrvL////////////9/v//i6nx/0d36f9Keen/Snnp/0p56f+HqPD/Y4zswCth
+        5QlKeekASnnpACth5QljjOzAiKnw/0p56f9Keen/Snnp/0l46f9jjOz/usz3/9ji+v/D0/j/apHt/0h4
+        6f9Keen/Snnp/0p56f9Keen/R3fp/5ay8v////////////////+tw/X/SHjp/0p56f9Keen/Snnp/4eo
+        8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM7MCIqfD/Snnp/0p56f9Keen/Snnp/0l46f9Me+n/VIDq/058
+        6f9JeOn/Snnp/0p56f9Keen/Snnp/0p56f9Leun/vM33/////////////////7PH9v9IeOn/Snnp/0p5
+        6f9Keen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIip8P9Keen/Snnp/0p56f9Keen/Snnp/0p5
+        6f9Jeen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/R3fp/3SY7v/v8/3/////////////////rMH1/0h4
+        6f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth5QljjOzAiKnw/0p56f9Keen/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0l46f9Xg+v/zdr5//////////////////39
+        //+JqPH/R3fp/0p56f9Keen/Snnp/4eo8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM7MCIqfD/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9IeOn/UX7q/7LG9v/+/v//////////
+        ////////1uH6/1uF6/9JeOn/Snnp/0p56f9Keen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIip
+        8P9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Jeen/R3fp/1yG6/+2yfb//P3/////
+        /////////////+rv/P95nO//SHfp/0p56f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth
+        5QljjOzAiKnw/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9IeOn/R3fp/1F/6v+EpPD/1eD6////
+        //////////////r7/v/N2vn/dZnu/0l46f9Keen/Snnp/0p56f9Keen/Snnp/4eo8P9jjOzAK2HlCUp5
+        6QBKeekAK2HlCWOM7MCIqfD/Snnp/0p56f9Keen/Snnp/0p56f9Keen/THrp/2qR7f+UsPL/zNn5//j6
+        /v/+/v//6e/8/9Hd+f+0yPb/g6Pw/1SA6v9Id+n/Snnp/0p56f9Keen/Snnp/0p56f9Keen/h6jw/2OM
+        7MArYeUJSnnpAEp56QArYeUJY4zswIip8P9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Meun/qsD1////
+        //////////////7+//+tw/X/Un/q/0l46f9Hd+n/SXjp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p5
+        6f+HqPD/Y4zswCth5QlKeekASnnpACth5QljjOzAiKnw/0p56f9Keen/Snnp/0p56f9Keen/SXnp/0p5
+        6f+ov/T//////////////////////87b+f9Qfer/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p5
+        6f9Keen/Snnp/4eo8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM7MCIqfD/Snnp/0p56f9Keen/Snnp/0p5
+        6f9Leun/l7Ly//b4/v/////////////////w9P3/iKfx/0l46f9Keen/Snnp/0p56f9Keen/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIip8P9Keen/Snnp/0p5
+        6f9Keen/SXjp/5Ku8v/2+P7/////////////////7PH9/4Sk8P9Keen/Snnp/0p56f9Keen/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth5QljjOzAiKnw/0p5
+        6f9Keen/Snnp/0h46f9qke3/6e78/////////////////+vw/f+AofD/SHjp/0p56f9Keen/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/4eo8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM
+        7MCIqfD/Snnp/0p56f9Keen/SHfp/6W89P/////////////////4+v7/jKrx/0h36f9Keen/Snnp/0p5
+        6f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/Snnp/0p56f9Keen/h6jw/2OM7MArYeUJSnnpAEp5
+        6QArYeUJY4zswIip8P9Keen/Snnp/0p56f9IeOn/s8f2/////////////////8TU+P9Pfer/SXnp/0p5
+        6f9Keen/Snnp/0p56f9JeOn/THrp/0996v9JeOn/SXnp/0p56f9Keen/Snnp/0p56f+HqPD/Y4zswCth
+        5QlKeekASnnpACth5QljjOzAiKnw/0p56f9Keen/Snnp/0l46f+0x/b/////////////////l7Ly/0d3
+        6f9Keen/Snnp/0p56f9Keen/SXjp/2iP7f+5zPf/z9z5/5q18/9Sf+r/SXnp/0p56f9Keen/Snnp/4eo
+        8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM7MCIqfD/Snnp/0p56f9Keen/SHfp/5+48///////////////
+        //+Tr/L/R3fp/0p56f9Keen/Snnp/0p56f9Meun/vc73////////////+/3//5Gu8v9Id+n/Snnp/0p5
+        6f9Keen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIip8P9Keen/Snnp/0p56f9IeOn/ZIzs/+Lp
+        +////////////6e+9P9Id+n/Snnp/0p56f9Keen/SXjp/1iD6//e5/v///////3+////////ssb2/0l4
+        6f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth5QljjOzAiKnw/0p56f9Keen/Snnp/0p5
+        6f9JeOn/fp/v/+Pq/P//////5+38/2yS7f9IeOn/Snnp/0p56f9Id+n/hqbw//j6/v////////////v9
+        //+RrvL/SHfp/0p56f9Keen/Snnp/4eo8P9jjOzAK2HlCUp56QBKeekAK2HlCWOM7MCIqfD/Snnp/0p5
+        6f9Keen/Snnp/0p56f9JeOn/ZY3s/6O79P/K2Pn/o7v0/1J/6v9Jeen/Snnp/3OY7v/N2/n/6e/8/+bt
+        /P/Y4/v/orr0/1N/6v9Jeen/Snnp/0p56f9Keen/h6jw/2OM7MArYeUJSnnpAEp56QArYeUJY4zswIeo
+        8P9Keen/Snnp/0p56f9Keen/Snnp/0p56f9IeOn/SHfp/0186f9TgOr/TXvp/0p56f9Keen/WYTr/2CJ
+        7P9fiez/Xojr/1WB6v9Keen/SXjp/0p56f9Keen/Snnp/0p56f+HqPD/Y4zswCth5QlKeekASnnpACth
+        5QlijOzAnLjz/1OA6v9Id+n/SHjp/0h46f9IeOn/SHjp/0h46f9IeOn/SHfp/0h36f9Id+n/SHjp/0h4
+        6f9Hd+n/R3fp/0d36f9Hd+n/R3fp/0h46f9IeOn/SHjp/0h46f9Id+n/VIHq/5258/9ijOzAK2HlCUp5
+        6QBKeekAMmfmCVuG68Cxyfb/ob30/4Kk8P+Ao/D/gKPw/4Cj8P+Ao/D/gKPw/4Cj8P+Ao/D/gKPw/4Cj
+        8P+Ao/D/gKPw/4Cj8P+Ao/D/gKPw/4Cj8P+Ao/D/gKPw/4Cj8P+Ao/D/gKPw/4Kk8P+kvvT/scn2/1uG
+        68AyZ+YJSnnpAEp56QBGdukFS3rpq2SN7P9zmO7/cpju/3KY7v9ymO7/cpju/3KY7v9ymO7/cpju/3KY
+        7v9ymO7/cpju/3KY7v9ymO7/cpju/3KY7v9ymO7/cpju/3KY7v9ymO7/cpju/3KY7v9ymO7/cpju/3OY
+        7v9kjez/S3rpqUZ26QRKeekAgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
+        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
+        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAE=
+</value>
+  </data>
+  <data name="notifyIcon1.Text" xml:space="preserve">
+    <value>notifyIcon1</value>
+  </data>
+  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 611</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAACMuAAAjLgAAAAAAAAAA
@@ -286,5 +2233,239 @@
         AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
         AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAE=
 </value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1080, 650</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ForWinQuant</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelLogin.Name" xml:space="preserve">
+    <value>toolStripStatusLabelLogin</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBarRequest.Name" xml:space="preserve">
+    <value>toolStripProgressBarRequest</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBarRequest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelStatus.Name" xml:space="preserve">
+    <value>toolStripStatusLabelStatus</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelAssetUpdateTime.Name" xml:space="preserve">
+    <value>toolStripStatusLabelAssetUpdateTime</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelAssetUpdateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderRevert.Name" xml:space="preserve">
+    <value>orderRevert</value>
+  </data>
+  <data name="&gt;&gt;orderRevert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;id.Name" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="&gt;&gt;id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderId.Name" xml:space="preserve">
+    <value>orderId</value>
+  </data>
+  <data name="&gt;&gt;orderId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderKey.Name" xml:space="preserve">
+    <value>orderKey</value>
+  </data>
+  <data name="&gt;&gt;orderKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;memberId.Name" xml:space="preserve">
+    <value>memberId</value>
+  </data>
+  <data name="&gt;&gt;memberId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;memberKey.Name" xml:space="preserve">
+    <value>memberKey</value>
+  </data>
+  <data name="&gt;&gt;memberKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usr.Name" xml:space="preserve">
+    <value>usr</value>
+  </data>
+  <data name="&gt;&gt;usr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientId.Name" xml:space="preserve">
+    <value>clientId</value>
+  </data>
+  <data name="&gt;&gt;clientId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderType.Name" xml:space="preserve">
+    <value>orderType</value>
+  </data>
+  <data name="&gt;&gt;orderType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pairCode.Name" xml:space="preserve">
+    <value>pairCode</value>
+  </data>
+  <data name="&gt;&gt;pairCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tradeCoinKey.Name" xml:space="preserve">
+    <value>tradeCoinKey</value>
+  </data>
+  <data name="&gt;&gt;tradeCoinKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;priceCoinKey.Name" xml:space="preserve">
+    <value>priceCoinKey</value>
+  </data>
+  <data name="&gt;&gt;priceCoinKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;priceType.Name" xml:space="preserve">
+    <value>priceType</value>
+  </data>
+  <data name="&gt;&gt;priceType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;price.Name" xml:space="preserve">
+    <value>price</value>
+  </data>
+  <data name="&gt;&gt;price.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quantity.Name" xml:space="preserve">
+    <value>quantity</value>
+  </data>
+  <data name="&gt;&gt;quantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastQuantity.Name" xml:space="preserve">
+    <value>lastQuantity</value>
+  </data>
+  <data name="&gt;&gt;lastQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orderStatus.Name" xml:space="preserve">
+    <value>orderStatus</value>
+  </data>
+  <data name="&gt;&gt;orderStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;matched.Name" xml:space="preserve">
+    <value>matched</value>
+  </data>
+  <data name="&gt;&gt;matched.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;createdAt.Name" xml:space="preserve">
+    <value>createdAt</value>
+  </data>
+  <data name="&gt;&gt;createdAt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;icon.Name" xml:space="preserve">
+    <value>icon</value>
+  </data>
+  <data name="&gt;&gt;icon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fee.Name" xml:space="preserve">
+    <value>fee</value>
+  </data>
+  <data name="&gt;&gt;fee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;amounts.Name" xml:space="preserve">
+    <value>amounts</value>
+  </data>
+  <data name="&gt;&gt;amounts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;avgPrice.Name" xml:space="preserve">
+    <value>avgPrice</value>
+  </data>
+  <data name="&gt;&gt;avgPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastModifiedAt.Name" xml:space="preserve">
+    <value>lastModifiedAt</value>
+  </data>
+  <data name="&gt;&gt;lastModifiedAt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;version.Name" xml:space="preserve">
+    <value>version</value>
+  </data>
+  <data name="&gt;&gt;version.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerChart.Name" xml:space="preserve">
+    <value>timerChart</value>
+  </data>
+  <data name="&gt;&gt;timerChart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerAction.Name" xml:space="preserve">
+    <value>timerAction</value>
+  </data>
+  <data name="&gt;&gt;timerAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerInit.Name" xml:space="preserve">
+    <value>timerInit</value>
+  </data>
+  <data name="&gt;&gt;timerInit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuMineToolStripMenuItem.Name" xml:space="preserve">
+    <value>menuMineToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuMineToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;设置ToolStripMenuItem.Name" xml:space="preserve">
+    <value>设置ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;设置ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettingsMenuItem.Name" xml:space="preserve">
+    <value>SynchronizeAdvancedSettingsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;SynchronizeAdvancedSettingsMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
+    <value>notifyIcon1</value>
+  </data>
+  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

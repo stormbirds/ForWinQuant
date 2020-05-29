@@ -31,7 +31,7 @@ namespace ForWinQuant
         /// <param name="postOrder"></param>
         /// <returns></returns>
         [Post("/{type}")]
-        Task<Restful<JObject>> CreateOrder(string type, [Body(BodySerializationMethod.Serialized)]PostOrder postOrder);
+        Task<Restful<JObject>> CreateOrder(string api_id, string secret_key,string type, [Body(BodySerializationMethod.Serialized)]PostOrder postOrder);
 
         /// <summary>
         /// 查询我的订单列表
@@ -43,7 +43,7 @@ namespace ForWinQuant
         /// <param name="pageSize">分⻚</param>
         /// <returns></returns>
         [Get("")]
-        Task<Restful<OrderContent>> GetOrder(string pairSymbol, int states, int pageNum, int pageSize);
+        Task<Restful<OrderContent>> GetOrder(string api_id, string secret_key,string pairSymbol, int states, int pageNum, int pageSize);
 
         /// <summary>
         /// 查询我的所有订单列表
@@ -53,7 +53,7 @@ namespace ForWinQuant
         /// <param name="pageSize"></param>
         /// <returns></returns>
         [Get("")]
-        Task<Restful<OrderContent>> GetOrder(string pairSymbol, int pageNum, int pageSize);
+        Task<Restful<OrderContent>> GetOrder(string api_id, string secret_key,string pairSymbol, int pageNum, int pageSize);
 
         /// <summary>
         /// 查询指定订单
@@ -62,7 +62,7 @@ namespace ForWinQuant
         /// <param name="order_id"></param>
         /// <returns></returns>
         [Get("/{order_id}")]
-        Task<Restful<Order>> GetOrder(string order_id);
+        Task<Restful<Order>> GetOrder(string api_id, string secret_key,string order_id);
 
         /// <summary>
         /// 申请撤销订单
@@ -71,7 +71,7 @@ namespace ForWinQuant
         /// <param name="order_id"></param>
         /// <returns></returns>
         [Post("/{order_id}/cancellation")]
-        Task<Restful<JObject>> CancelOrder(string order_id);
+        Task<Restful<JObject>> CancelOrder(string api_id, string secret_key,string order_id);
 
         /// <summary>
         /// 查询指定订单的成交记录
@@ -82,7 +82,7 @@ namespace ForWinQuant
         /// <param name="pageSize"></param>
         /// <returns></returns>
         [Get("/{order_id}/trade-histories")]
-        Task<Restful<JObject>> GetOrderTrade(string order_id, int pageNum, int pageSize);
+        Task<Restful<JObject>> GetOrderTrade(string api_id, string secret_key,string order_id, int pageNum, int pageSize);
     }
 
     public class PostOrder

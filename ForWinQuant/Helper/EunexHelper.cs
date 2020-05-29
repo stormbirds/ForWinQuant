@@ -50,81 +50,75 @@ namespace ForWinQuant.Helper
         }
 
         #region 定义基础服务接口部分
-        public static Task<Restful<JObject>> GetServerTime()
+        public static Task<Restful<JObject>> GetServerTime(string api_id, string secret_key)
         {
             var api = HttpRestfulService.ForBaseApi<IBaseApi>();
-            return api.GetServerTime();
+            return api.GetServerTime(api_id, secret_key);
         }
 
-        public static Task<Restful<JObject>> GetCoins()
+        public static Task<Restful<JObject>> GetCoins(string api_id, string secret_key)
         {
             var api = HttpRestfulService.ForBaseApi<IBaseApi>();
-            return api.GetCoins();
+            return api.GetCoins(api_id, secret_key);
         }
 
-        public static Task<Restful<JObject>> GetPairs()
+        public static Task<Restful<JObject>> GetPairs(string api_id, string secret_key)
         {
             var api = HttpRestfulService.ForBaseApi<IBaseApi>();
-            return api.GetPairs();
+            return api.GetPairs(api_id, secret_key);
         }
         #endregion
 
         #region 定义行情接口
-        public static Task<Restful<JObject>> GetDepthDetails(string pair_symbol)
+        public static Task<Restful<JObject>> GetDepthDetails(string api_id, string secret_key,string pair_symbol)
         {
             var api = HttpRestfulService.ForBaseApi<IMarketApi>();
-            return api.GetDepthDetails(pair_symbol);
+            return api.GetDepthDetails(api_id, secret_key, pair_symbol);
         }
 
-        public static Task<Restful<JObject>> GetPairSymbol(string pair_symbol) {
+        public static Task<Restful<JObject>> GetPairSymbol(string api_id, string secret_key,string pair_symbol) {
             var api = HttpRestfulService.ForBaseApi<IMarketApi>();
-            return api.GetPairSymbol(pair_symbol);
+            return api.GetPairSymbol(api_id, secret_key, pair_symbol);
         }
         #endregion
 
         #region 定义用户信息接口
-        public static Task<Restful<List<UserBalances>>> GetUserBalances()
+        public static Task<Restful<List<UserBalances>>> GetUserBalances(string api_id, string secret_key)
         {
             var api = HttpRestfulService.ForBaseApi<IMembersApi>();
-            return api.GetUserBalances();
+            return api.GetUserBalances(api_id, secret_key);
         }
         #endregion
 
         #region 定义订单接口
-        public static Task<Restful<JObject>> CreateOrder(string type, [Body]PostOrder postOrder)
+        public static Task<Restful<JObject>> CreateOrder(string api_id, string secret_key,string type, [Body]PostOrder postOrder)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.CreateOrder(type,postOrder);
+            return api.CreateOrder(api_id, secret_key, type, postOrder);
         }
 
-        public static Task<Restful<OrderContent>> GetOrder(string pairSymbol, int states, int pageNum, int pageSize)
+        public static Task<Restful<OrderContent>> GetOrder(string api_id, string secret_key,string pairSymbol, int states, int pageNum, int pageSize)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.GetOrder(pairSymbol,states,pageNum,pageSize);
+            return api.GetOrder(api_id, secret_key, pairSymbol, states,pageNum,pageSize);
         }
 
-        public static Task<Restful<OrderContent>> GetOrder(string pairSymbol, int pageNum, int pageSize)
+        public static Task<Restful<Order>> GetOrder(string api_id, string secret_key,string order_id)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.GetOrder(pairSymbol, pageNum, pageSize);
+            return api.GetOrder(api_id, secret_key, order_id);
         }
 
-        public static Task<Restful<Order>> GetOrder(string order_id)
+        public static Task<Restful<JObject>> CancelOrder(string api_id, string secret_key,string order_id)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.GetOrder(order_id);
+            return api.CancelOrder(api_id, secret_key, order_id);
         }
 
-        public static Task<Restful<JObject>> CancelOrder(string order_id)
+        public static Task<Restful<JObject>> GetOrderTrade(string api_id, string secret_key,string order_id, int pageNum, int pageSize)
         {
             var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.CancelOrder(order_id);
-        }
-
-        public static Task<Restful<JObject>> GetOrderTrade(string order_id, int pageNum, int pageSize)
-        {
-            var api = HttpRestfulService.ForBaseApi<IOrdersApi>();
-            return api.GetOrderTrade(order_id,pageNum,pageSize);
+            return api.GetOrderTrade(api_id, secret_key, order_id,pageNum,pageSize);
         }
         #endregion
 

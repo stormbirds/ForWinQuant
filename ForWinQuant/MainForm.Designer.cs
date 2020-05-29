@@ -29,26 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.mainTabControl = new System.Windows.Forms.TabControl();
-            this.tabPageMine = new System.Windows.Forms.TabPage();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBarRequest = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelAssetUpdateTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeViewSubUsers = new System.Windows.Forms.TreeView();
             this.splitContainerMine = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBoxExecutionLog = new System.Windows.Forms.GroupBox();
+            this.textBoxLog = new System.Windows.Forms.RichTextBox();
+            this.groupBoxDelegateList = new System.Windows.Forms.GroupBox();
             this.dataGridViewUserOrder = new System.Windows.Forms.DataGridView();
             this.orderRevert = new System.Windows.Forms.DataGridViewButtonColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,13 +70,29 @@
             this.avgPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastModifiedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBoxAdvancedSettings = new System.Windows.Forms.GroupBox();
+            this.SynchronizeAdvancedSettings = new System.Windows.Forms.LinkLabel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBoxOfflinePrompt = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePickerLateHighPriceStart = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxTwoHigherPrices = new System.Windows.Forms.CheckBox();
+            this.checkBoxEarlyHighPrice = new System.Windows.Forms.CheckBox();
+            this.checkBoxLateHighPrice = new System.Windows.Forms.CheckBox();
+            this.dateTimePickerTwoHigherPriceStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEarlyHighPriceStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerLateHighPriceEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEarlyHighPriceEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTwoHigherPriceEnd = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxDealPrompt = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDownRetainedAmount = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBoxAction = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAction = new System.Windows.Forms.Panel();
             this.buttonMine = new System.Windows.Forms.Button();
             this.label_NGRC_value = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -97,115 +108,163 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.tabPagePrice = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBarRequest = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.timerChart = new System.Windows.Forms.Timer(this.components);
             this.timerAction = new System.Windows.Forms.Timer(this.components);
             this.timerInit = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuMineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainTabControl.SuspendLayout();
-            this.tabPageMine.SuspendLayout();
+            this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SynchronizeAdvancedSettingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.mainStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).BeginInit();
             this.splitContainerMine.Panel1.SuspendLayout();
             this.splitContainerMine.Panel2.SuspendLayout();
             this.splitContainerMine.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            this.groupBoxExecutionLog.SuspendLayout();
+            this.groupBoxDelegateList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).BeginInit();
+            this.groupBoxAdvancedSettings.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRetainedAmount)).BeginInit();
             this.groupBoxAction.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.mainStatusStrip.SuspendLayout();
-            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
+            this.panelAction.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mainTabControl
+            // toolStripContainer1
             // 
-            this.mainTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.mainTabControl.Controls.Add(this.tabPageMine);
-            this.mainTabControl.Controls.Add(this.tabPagePrice);
-            this.mainTabControl.Controls.Add(this.tabPage1);
-            this.mainTabControl.Controls.Add(this.tabPage2);
-            this.mainTabControl.Controls.Add(this.tabPage3);
-            this.mainTabControl.Controls.Add(this.tabPage4);
-            this.mainTabControl.Controls.Add(this.tabPage5);
-            this.mainTabControl.Controls.Add(this.tabPage6);
-            this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainTabControl.ItemSize = new System.Drawing.Size(48, 20);
-            this.mainTabControl.Location = new System.Drawing.Point(0, 0);
-            this.mainTabControl.Name = "mainTabControl";
-            this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.ShowToolTips = true;
-            this.mainTabControl.Size = new System.Drawing.Size(1064, 564);
-            this.mainTabControl.TabIndex = 0;
             // 
-            // tabPageMine
+            // toolStripContainer1.BottomToolStripPanel
             // 
-            this.tabPageMine.Controls.Add(this.splitContainerMine);
-            this.tabPageMine.Location = new System.Drawing.Point(4, 24);
-            this.tabPageMine.Name = "tabPageMine";
-            this.tabPageMine.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMine.Size = new System.Drawing.Size(1056, 536);
-            this.tabPageMine.TabIndex = 0;
-            this.tabPageMine.Text = "我的";
-            this.tabPageMine.UseVisualStyleBackColor = true;
+            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.mainStatusStrip);
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.splitContainer1);
+            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
+            this.toolStripContainer1.LeftToolStripPanelVisible = false;
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.RightToolStripPanelVisible = false;
+            this.toolStripContainer1.TopToolStripPanelVisible = false;
+            // 
+            // mainStatusStrip
+            // 
+            resources.ApplyResources(this.mainStatusStrip, "mainStatusStrip");
+            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelLogin,
+            this.toolStripProgressBarRequest,
+            this.toolStripStatusLabelStatus,
+            this.toolStripStatusLabelAssetUpdateTime});
+            this.mainStatusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.mainStatusStrip.Name = "mainStatusStrip";
+            // 
+            // toolStripStatusLabelLogin
+            // 
+            this.toolStripStatusLabelLogin.ForeColor = System.Drawing.Color.Red;
+            this.toolStripStatusLabelLogin.Name = "toolStripStatusLabelLogin";
+            resources.ApplyResources(this.toolStripStatusLabelLogin, "toolStripStatusLabelLogin");
+            // 
+            // toolStripProgressBarRequest
+            // 
+            this.toolStripProgressBarRequest.Margin = new System.Windows.Forms.Padding(20, 3, 1, 3);
+            this.toolStripProgressBarRequest.Name = "toolStripProgressBarRequest";
+            resources.ApplyResources(this.toolStripProgressBarRequest, "toolStripProgressBarRequest");
+            this.toolStripProgressBarRequest.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.toolStripProgressBarRequest.Tag = "初始化";
+            // 
+            // toolStripStatusLabelStatus
+            // 
+            this.toolStripStatusLabelStatus.Name = "toolStripStatusLabelStatus";
+            resources.ApplyResources(this.toolStripStatusLabelStatus, "toolStripStatusLabelStatus");
+            // 
+            // toolStripStatusLabelAssetUpdateTime
+            // 
+            this.toolStripStatusLabelAssetUpdateTime.Name = "toolStripStatusLabelAssetUpdateTime";
+            resources.ApplyResources(this.toolStripStatusLabelAssetUpdateTime, "toolStripStatusLabelAssetUpdateTime");
+            this.toolStripStatusLabelAssetUpdateTime.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.treeViewSubUsers);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainerMine);
+            // 
+            // treeViewSubUsers
+            // 
+            resources.ApplyResources(this.treeViewSubUsers, "treeViewSubUsers");
+            this.treeViewSubUsers.Name = "treeViewSubUsers";
             // 
             // splitContainerMine
             // 
-            this.splitContainerMine.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.splitContainerMine, "splitContainerMine");
             this.splitContainerMine.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainerMine.IsSplitterFixed = true;
-            this.splitContainerMine.Location = new System.Drawing.Point(3, 3);
             this.splitContainerMine.Name = "splitContainerMine";
             // 
             // splitContainerMine.Panel1
             // 
-            this.splitContainerMine.Panel1.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainerMine.Panel1.Margin = new System.Windows.Forms.Padding(3);
-            this.splitContainerMine.Panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainerMine.Panel1.Controls.Add(this.tableLayoutPanel1);
             // 
             // splitContainerMine.Panel2
             // 
             this.splitContainerMine.Panel2.Controls.Add(this.groupBoxAction);
-            this.splitContainerMine.Size = new System.Drawing.Size(1050, 530);
-            this.splitContainerMine.SplitterDistance = 716;
-            this.splitContainerMine.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanel1
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridViewUserOrder, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(706, 520);
-            this.tableLayoutPanel2.TabIndex = 3;
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxExecutionLog, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxDelegateList, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBoxAdvancedSettings, 0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // groupBoxExecutionLog
+            // 
+            this.groupBoxExecutionLog.Controls.Add(this.textBoxLog);
+            resources.ApplyResources(this.groupBoxExecutionLog, "groupBoxExecutionLog");
+            this.groupBoxExecutionLog.Name = "groupBoxExecutionLog";
+            this.groupBoxExecutionLog.TabStop = false;
+            // 
+            // textBoxLog
+            // 
+            resources.ApplyResources(this.textBoxLog, "textBoxLog");
+            this.textBoxLog.HideSelection = false;
+            this.textBoxLog.Name = "textBoxLog";
+            // 
+            // groupBoxDelegateList
+            // 
+            this.groupBoxDelegateList.Controls.Add(this.dataGridViewUserOrder);
+            resources.ApplyResources(this.groupBoxDelegateList, "groupBoxDelegateList");
+            this.groupBoxDelegateList.Name = "groupBoxDelegateList";
+            this.groupBoxDelegateList.TabStop = false;
             // 
             // dataGridViewUserOrder
             // 
             this.dataGridViewUserOrder.AllowUserToAddRows = false;
-            this.dataGridViewUserOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUserOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewUserOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderRevert,
             this.id,
@@ -232,590 +291,443 @@
             this.avgPrice,
             this.lastModifiedAt,
             this.version});
-            this.dataGridViewUserOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewUserOrder.Location = new System.Drawing.Point(3, 263);
+            resources.ApplyResources(this.dataGridViewUserOrder, "dataGridViewUserOrder");
             this.dataGridViewUserOrder.Name = "dataGridViewUserOrder";
             this.dataGridViewUserOrder.RowTemplate.Height = 23;
-            this.dataGridViewUserOrder.Size = new System.Drawing.Size(700, 254);
-            this.dataGridViewUserOrder.TabIndex = 4;
-            this.dataGridViewUserOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUserOrder_CellContentClick);
             // 
             // orderRevert
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.NullValue = "撤单";
             this.orderRevert.DefaultCellStyle = dataGridViewCellStyle1;
-            this.orderRevert.HeaderText = "操作";
+            resources.ApplyResources(this.orderRevert, "orderRevert");
             this.orderRevert.Name = "orderRevert";
             this.orderRevert.Text = "撤单";
-            this.orderRevert.Width = 40;
             // 
             // id
             // 
             this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
+            resources.ApplyResources(this.id, "id");
             this.id.Name = "id";
-            this.id.Visible = false;
             // 
             // orderId
             // 
             this.orderId.DataPropertyName = "orderId";
-            this.orderId.HeaderText = "订单ID";
+            resources.ApplyResources(this.orderId, "orderId");
             this.orderId.Name = "orderId";
-            this.orderId.Visible = false;
             // 
             // orderKey
             // 
             this.orderKey.DataPropertyName = "orderKey";
-            this.orderKey.HeaderText = "订单Key";
+            resources.ApplyResources(this.orderKey, "orderKey");
             this.orderKey.Name = "orderKey";
-            this.orderKey.Visible = false;
             // 
             // memberId
             // 
             this.memberId.DataPropertyName = "memberId";
-            this.memberId.HeaderText = "用户ID";
+            resources.ApplyResources(this.memberId, "memberId");
             this.memberId.Name = "memberId";
-            this.memberId.Visible = false;
             // 
             // memberKey
             // 
             this.memberKey.DataPropertyName = "memberKey";
-            this.memberKey.HeaderText = "用户Key";
+            resources.ApplyResources(this.memberKey, "memberKey");
             this.memberKey.Name = "memberKey";
-            this.memberKey.Visible = false;
             // 
             // usr
             // 
             this.usr.DataPropertyName = "usr";
-            this.usr.HeaderText = "用户";
+            resources.ApplyResources(this.usr, "usr");
             this.usr.Name = "usr";
             // 
             // clientId
             // 
             this.clientId.DataPropertyName = "clientId";
-            this.clientId.HeaderText = "平台途径";
+            resources.ApplyResources(this.clientId, "clientId");
             this.clientId.Name = "clientId";
             // 
             // orderType
             // 
             this.orderType.DataPropertyName = "orderType";
-            this.orderType.HeaderText = "订单类型";
+            resources.ApplyResources(this.orderType, "orderType");
             this.orderType.Name = "orderType";
             // 
             // pairCode
             // 
             this.pairCode.DataPropertyName = "pairCode";
-            this.pairCode.HeaderText = "交易对码";
+            resources.ApplyResources(this.pairCode, "pairCode");
             this.pairCode.Name = "pairCode";
-            this.pairCode.Visible = false;
             // 
             // tradeCoinKey
             // 
             this.tradeCoinKey.DataPropertyName = "tradeCoinKey";
-            this.tradeCoinKey.HeaderText = "tradeCoinKey";
+            resources.ApplyResources(this.tradeCoinKey, "tradeCoinKey");
             this.tradeCoinKey.Name = "tradeCoinKey";
-            this.tradeCoinKey.Visible = false;
             // 
             // priceCoinKey
             // 
             this.priceCoinKey.DataPropertyName = "priceCoinKey";
-            this.priceCoinKey.HeaderText = "priceCoinKey";
+            resources.ApplyResources(this.priceCoinKey, "priceCoinKey");
             this.priceCoinKey.Name = "priceCoinKey";
-            this.priceCoinKey.Visible = false;
             // 
             // priceType
             // 
             this.priceType.DataPropertyName = "priceType";
-            this.priceType.HeaderText = "币种";
+            resources.ApplyResources(this.priceType, "priceType");
             this.priceType.Name = "priceType";
             // 
             // price
             // 
             this.price.DataPropertyName = "price";
-            this.price.HeaderText = "价格";
+            resources.ApplyResources(this.price, "price");
             this.price.Name = "price";
             // 
             // quantity
             // 
             this.quantity.DataPropertyName = "quantity";
-            this.quantity.HeaderText = "数量";
+            resources.ApplyResources(this.quantity, "quantity");
             this.quantity.Name = "quantity";
             // 
             // lastQuantity
             // 
             this.lastQuantity.DataPropertyName = "lastQuantity";
-            this.lastQuantity.HeaderText = "lastQuantity";
+            resources.ApplyResources(this.lastQuantity, "lastQuantity");
             this.lastQuantity.Name = "lastQuantity";
-            this.lastQuantity.Visible = false;
             // 
             // orderStatus
             // 
             this.orderStatus.DataPropertyName = "orderStatus";
-            this.orderStatus.HeaderText = "订单状态";
+            resources.ApplyResources(this.orderStatus, "orderStatus");
             this.orderStatus.Name = "orderStatus";
             // 
             // matched
             // 
             this.matched.DataPropertyName = "matched";
-            this.matched.HeaderText = "matched";
+            resources.ApplyResources(this.matched, "matched");
             this.matched.Name = "matched";
             // 
             // createdAt
             // 
             this.createdAt.DataPropertyName = "createdAt";
-            this.createdAt.HeaderText = "创建时间";
+            resources.ApplyResources(this.createdAt, "createdAt");
             this.createdAt.Name = "createdAt";
             // 
             // icon
             // 
             this.icon.DataPropertyName = "icon";
-            this.icon.HeaderText = "icon";
+            resources.ApplyResources(this.icon, "icon");
             this.icon.Name = "icon";
-            this.icon.Visible = false;
             // 
             // fee
             // 
             this.fee.DataPropertyName = "fee";
-            this.fee.HeaderText = "金额";
+            resources.ApplyResources(this.fee, "fee");
             this.fee.Name = "fee";
             // 
             // amounts
             // 
             this.amounts.DataPropertyName = "amounts";
-            this.amounts.HeaderText = "数量";
+            resources.ApplyResources(this.amounts, "amounts");
             this.amounts.Name = "amounts";
             // 
             // avgPrice
             // 
             this.avgPrice.DataPropertyName = "avgPrice";
-            this.avgPrice.HeaderText = "平均价格";
+            resources.ApplyResources(this.avgPrice, "avgPrice");
             this.avgPrice.Name = "avgPrice";
             // 
             // lastModifiedAt
             // 
             this.lastModifiedAt.DataPropertyName = "lastModifiedAt";
-            this.lastModifiedAt.HeaderText = "上次修改时间";
+            resources.ApplyResources(this.lastModifiedAt, "lastModifiedAt");
             this.lastModifiedAt.Name = "lastModifiedAt";
-            this.lastModifiedAt.Visible = false;
             // 
             // version
             // 
             this.version.DataPropertyName = "version";
-            this.version.HeaderText = "版本";
+            resources.ApplyResources(this.version, "version");
             this.version.Name = "version";
-            this.version.Visible = false;
             // 
-            // tableLayoutPanel1
+            // groupBoxAdvancedSettings
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.chart1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chart2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chart3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.chart4, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 254);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.groupBoxAdvancedSettings.Controls.Add(this.SynchronizeAdvancedSettings);
+            this.groupBoxAdvancedSettings.Controls.Add(this.tableLayoutPanel2);
+            resources.ApplyResources(this.groupBoxAdvancedSettings, "groupBoxAdvancedSettings");
+            this.groupBoxAdvancedSettings.Name = "groupBoxAdvancedSettings";
+            this.groupBoxAdvancedSettings.TabStop = false;
             // 
-            // chart1
+            // SynchronizeAdvancedSettings
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(4, 4);
-            this.chart1.Name = "chart1";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.LabelBorderWidth = 3;
-            series1.Legend = "Legend1";
-            series1.Name = "xx指数";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.LabelBorderWidth = 3;
-            series2.Legend = "Legend1";
-            series2.Name = "YY指数";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(342, 119);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title1.Name = "Title1";
-            this.chart1.Titles.Add(title1);
+            resources.ApplyResources(this.SynchronizeAdvancedSettings, "SynchronizeAdvancedSettings");
+            this.SynchronizeAdvancedSettings.Name = "SynchronizeAdvancedSettings";
+            this.SynchronizeAdvancedSettings.TabStop = true;
+            this.SynchronizeAdvancedSettings.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SynchronizeAdvancedSettings_LinkClicked);
             // 
-            // chart2
+            // tableLayoutPanel2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(353, 4);
-            this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(343, 119);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxOfflinePrompt, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerLateHighPriceStart, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxTwoHigherPrices, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxEarlyHighPrice, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxLateHighPrice, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerTwoHigherPriceStart, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerEarlyHighPriceStart, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerLateHighPriceEnd, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerEarlyHighPriceEnd, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dateTimePickerTwoHigherPriceEnd, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxDealPrompt, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 4, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
-            // chart3
+            // checkBoxOfflinePrompt
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(4, 130);
-            this.chart3.Name = "chart3";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "ZZ指数";
-            this.chart3.Series.Add(series4);
-            this.chart3.Size = new System.Drawing.Size(342, 120);
-            this.chart3.TabIndex = 2;
-            this.chart3.Text = "chart3";
+            resources.ApplyResources(this.checkBoxOfflinePrompt, "checkBoxOfflinePrompt");
+            this.checkBoxOfflinePrompt.Name = "checkBoxOfflinePrompt";
+            this.checkBoxOfflinePrompt.UseVisualStyleBackColor = true;
             // 
-            // chart4
+            // label8
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea4);
-            this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart4.Legends.Add(legend4);
-            this.chart4.Location = new System.Drawing.Point(353, 130);
-            this.chart4.Name = "chart4";
-            this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart4.Series.Add(series5);
-            this.chart4.Size = new System.Drawing.Size(343, 120);
-            this.chart4.TabIndex = 3;
-            this.chart4.Text = "chart4";
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // dateTimePickerLateHighPriceStart
+            // 
+            resources.ApplyResources(this.dateTimePickerLateHighPriceStart, "dateTimePickerLateHighPriceStart");
+            this.dateTimePickerLateHighPriceStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerLateHighPriceStart.Name = "dateTimePickerLateHighPriceStart";
+            this.dateTimePickerLateHighPriceStart.ShowUpDown = true;
+            this.dateTimePickerLateHighPriceStart.Value = new System.DateTime(2020, 5, 28, 19, 0, 0, 0);
+            // 
+            // checkBoxTwoHigherPrices
+            // 
+            resources.ApplyResources(this.checkBoxTwoHigherPrices, "checkBoxTwoHigherPrices");
+            this.checkBoxTwoHigherPrices.Name = "checkBoxTwoHigherPrices";
+            this.checkBoxTwoHigherPrices.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEarlyHighPrice
+            // 
+            resources.ApplyResources(this.checkBoxEarlyHighPrice, "checkBoxEarlyHighPrice");
+            this.checkBoxEarlyHighPrice.Name = "checkBoxEarlyHighPrice";
+            this.toolTip1.SetToolTip(this.checkBoxEarlyHighPrice, resources.GetString("checkBoxEarlyHighPrice.ToolTip"));
+            this.checkBoxEarlyHighPrice.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLateHighPrice
+            // 
+            resources.ApplyResources(this.checkBoxLateHighPrice, "checkBoxLateHighPrice");
+            this.checkBoxLateHighPrice.Name = "checkBoxLateHighPrice";
+            this.checkBoxLateHighPrice.Tag = "";
+            this.checkBoxLateHighPrice.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerTwoHigherPriceStart
+            // 
+            resources.ApplyResources(this.dateTimePickerTwoHigherPriceStart, "dateTimePickerTwoHigherPriceStart");
+            this.dateTimePickerTwoHigherPriceStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerTwoHigherPriceStart.Name = "dateTimePickerTwoHigherPriceStart";
+            this.dateTimePickerTwoHigherPriceStart.ShowUpDown = true;
+            this.dateTimePickerTwoHigherPriceStart.Value = new System.DateTime(2020, 5, 28, 18, 0, 0, 0);
+            // 
+            // dateTimePickerEarlyHighPriceStart
+            // 
+            resources.ApplyResources(this.dateTimePickerEarlyHighPriceStart, "dateTimePickerEarlyHighPriceStart");
+            this.dateTimePickerEarlyHighPriceStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEarlyHighPriceStart.Name = "dateTimePickerEarlyHighPriceStart";
+            this.dateTimePickerEarlyHighPriceStart.ShowUpDown = true;
+            this.dateTimePickerEarlyHighPriceStart.Value = new System.DateTime(2020, 5, 28, 7, 0, 0, 0);
+            // 
+            // dateTimePickerLateHighPriceEnd
+            // 
+            resources.ApplyResources(this.dateTimePickerLateHighPriceEnd, "dateTimePickerLateHighPriceEnd");
+            this.dateTimePickerLateHighPriceEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerLateHighPriceEnd.Name = "dateTimePickerLateHighPriceEnd";
+            this.dateTimePickerLateHighPriceEnd.ShowUpDown = true;
+            this.dateTimePickerLateHighPriceEnd.Value = new System.DateTime(2020, 5, 28, 20, 59, 0, 0);
+            // 
+            // dateTimePickerEarlyHighPriceEnd
+            // 
+            resources.ApplyResources(this.dateTimePickerEarlyHighPriceEnd, "dateTimePickerEarlyHighPriceEnd");
+            this.dateTimePickerEarlyHighPriceEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEarlyHighPriceEnd.Name = "dateTimePickerEarlyHighPriceEnd";
+            this.dateTimePickerEarlyHighPriceEnd.ShowUpDown = true;
+            this.dateTimePickerEarlyHighPriceEnd.Value = new System.DateTime(2020, 5, 28, 8, 59, 0, 0);
+            // 
+            // dateTimePickerTwoHigherPriceEnd
+            // 
+            resources.ApplyResources(this.dateTimePickerTwoHigherPriceEnd, "dateTimePickerTwoHigherPriceEnd");
+            this.dateTimePickerTwoHigherPriceEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerTwoHigherPriceEnd.Name = "dateTimePickerTwoHigherPriceEnd";
+            this.dateTimePickerTwoHigherPriceEnd.ShowUpDown = true;
+            this.dateTimePickerTwoHigherPriceEnd.Value = new System.DateTime(2020, 5, 28, 8, 59, 0, 0);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // checkBoxDealPrompt
+            // 
+            resources.ApplyResources(this.checkBoxDealPrompt, "checkBoxDealPrompt");
+            this.checkBoxDealPrompt.Name = "checkBoxDealPrompt";
+            this.checkBoxDealPrompt.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.numericUpDownRetainedAmount);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label11);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // numericUpDownRetainedAmount
+            // 
+            resources.ApplyResources(this.numericUpDownRetainedAmount, "numericUpDownRetainedAmount");
+            this.numericUpDownRetainedAmount.DecimalPlaces = 2;
+            this.numericUpDownRetainedAmount.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownRetainedAmount.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.numericUpDownRetainedAmount.Name = "numericUpDownRetainedAmount";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
             // 
             // groupBoxAction
             // 
-            this.groupBoxAction.Controls.Add(this.panel1);
-            this.groupBoxAction.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxAction.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxAction.Controls.Add(this.panelAction);
+            resources.ApplyResources(this.groupBoxAction, "groupBoxAction");
             this.groupBoxAction.Name = "groupBoxAction";
-            this.groupBoxAction.Size = new System.Drawing.Size(330, 530);
-            this.groupBoxAction.TabIndex = 0;
             this.groupBoxAction.TabStop = false;
-            this.groupBoxAction.Text = "操作区";
             // 
-            // panel1
+            // panelAction
             // 
-            this.panel1.Controls.Add(this.buttonMine);
-            this.panel1.Controls.Add(this.label_NGRC_value);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label_USDT_value);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.labelCountTradeToday);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.labelTodayRound);
-            this.panel1.Controls.Add(this.labelCurrentPrice);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.labelUserName);
-            this.panel1.Location = new System.Drawing.Point(6, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 532);
-            this.panel1.TabIndex = 0;
+            this.panelAction.Controls.Add(this.buttonMine);
+            this.panelAction.Controls.Add(this.label_NGRC_value);
+            this.panelAction.Controls.Add(this.label14);
+            this.panelAction.Controls.Add(this.label_USDT_value);
+            this.panelAction.Controls.Add(this.label12);
+            this.panelAction.Controls.Add(this.labelCountTradeToday);
+            this.panelAction.Controls.Add(this.label10);
+            this.panelAction.Controls.Add(this.labelTodayRound);
+            this.panelAction.Controls.Add(this.labelCurrentPrice);
+            this.panelAction.Controls.Add(this.label6);
+            this.panelAction.Controls.Add(this.label5);
+            this.panelAction.Controls.Add(this.label4);
+            this.panelAction.Controls.Add(this.label3);
+            this.panelAction.Controls.Add(this.label2);
+            this.panelAction.Controls.Add(this.labelUserName);
+            resources.ApplyResources(this.panelAction, "panelAction");
+            this.panelAction.Name = "panelAction";
             // 
             // buttonMine
             // 
-            this.buttonMine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMine.Location = new System.Drawing.Point(57, 468);
+            resources.ApplyResources(this.buttonMine, "buttonMine");
+            this.buttonMine.BackColor = System.Drawing.Color.Pink;
+            this.buttonMine.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonMine.Name = "buttonMine";
-            this.buttonMine.Size = new System.Drawing.Size(203, 40);
-            this.buttonMine.TabIndex = 14;
-            this.buttonMine.Text = "登录";
             this.buttonMine.UseVisualStyleBackColor = false;
-            this.buttonMine.Click += new System.EventHandler(this.buttonMine_Click);
+            this.buttonMine.MouseLeave += new System.EventHandler(this.buttonMine_MouseLeave);
+            this.buttonMine.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMine_MouseMove);
             // 
             // label_NGRC_value
             // 
-            this.label_NGRC_value.AutoSize = true;
-            this.label_NGRC_value.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            resources.ApplyResources(this.label_NGRC_value, "label_NGRC_value");
             this.label_NGRC_value.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_NGRC_value.Location = new System.Drawing.Point(55, 371);
             this.label_NGRC_value.Name = "label_NGRC_value";
-            this.label_NGRC_value.Size = new System.Drawing.Size(105, 14);
-            this.label_NGRC_value.TabIndex = 13;
-            this.label_NGRC_value.Text = "可用--，冻结--";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(55, 346);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 14);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "NGRC";
             // 
             // label_USDT_value
             // 
-            this.label_USDT_value.AutoSize = true;
-            this.label_USDT_value.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            resources.ApplyResources(this.label_USDT_value, "label_USDT_value");
             this.label_USDT_value.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_USDT_value.Location = new System.Drawing.Point(55, 320);
             this.label_USDT_value.Name = "label_USDT_value";
-            this.label_USDT_value.Size = new System.Drawing.Size(105, 14);
-            this.label_USDT_value.TabIndex = 11;
-            this.label_USDT_value.Text = "可用--，冻结--";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(55, 295);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 14);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "USDT";
             // 
             // labelCountTradeToday
             // 
-            this.labelCountTradeToday.AutoSize = true;
-            this.labelCountTradeToday.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            resources.ApplyResources(this.labelCountTradeToday, "labelCountTradeToday");
             this.labelCountTradeToday.ForeColor = System.Drawing.Color.Red;
-            this.labelCountTradeToday.Location = new System.Drawing.Point(55, 240);
             this.labelCountTradeToday.Name = "labelCountTradeToday";
-            this.labelCountTradeToday.Size = new System.Drawing.Size(14, 14);
-            this.labelCountTradeToday.TabIndex = 9;
-            this.labelCountTradeToday.Text = "-";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(55, 215);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 14);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "今日已刷(完成进度)";
             // 
             // labelTodayRound
             // 
-            this.labelTodayRound.AutoSize = true;
-            this.labelTodayRound.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            resources.ApplyResources(this.labelTodayRound, "labelTodayRound");
             this.labelTodayRound.ForeColor = System.Drawing.Color.Red;
-            this.labelTodayRound.Location = new System.Drawing.Point(197, 180);
             this.labelTodayRound.Name = "labelTodayRound";
-            this.labelTodayRound.Size = new System.Drawing.Size(14, 14);
-            this.labelTodayRound.TabIndex = 7;
-            this.labelTodayRound.Text = "-";
             // 
             // labelCurrentPrice
             // 
-            this.labelCurrentPrice.AutoSize = true;
-            this.labelCurrentPrice.Font = new System.Drawing.Font("黑体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            resources.ApplyResources(this.labelCurrentPrice, "labelCurrentPrice");
             this.labelCurrentPrice.ForeColor = System.Drawing.Color.Red;
-            this.labelCurrentPrice.Location = new System.Drawing.Point(55, 180);
             this.labelCurrentPrice.Name = "labelCurrentPrice";
-            this.labelCurrentPrice.Size = new System.Drawing.Size(14, 14);
-            this.labelCurrentPrice.TabIndex = 6;
-            this.labelCurrentPrice.Text = "-";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(197, 155);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 14);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "今日轮次";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(55, 155);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 14);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "当前价格";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 94);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "账号估值：";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 78);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "剩余矿源：";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 62);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "即将释放：";
             // 
             // labelUserName
             // 
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(55, 41);
+            resources.ApplyResources(this.labelUserName, "labelUserName");
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(41, 12);
-            this.labelUserName.TabIndex = 0;
-            this.labelUserName.Text = "账号：";
-            // 
-            // tabPagePrice
-            // 
-            this.tabPagePrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPagePrice.Location = new System.Drawing.Point(4, 24);
-            this.tabPagePrice.Name = "tabPagePrice";
-            this.tabPagePrice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrice.Size = new System.Drawing.Size(1056, 536);
-            this.tabPagePrice.TabIndex = 1;
-            this.tabPagePrice.Text = "报价";
-            this.tabPagePrice.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "行情";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "策略";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "数据";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage4.TabIndex = 5;
-            this.tabPage4.Text = "交易";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage5.TabIndex = 6;
-            this.tabPage5.Text = "咨询";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 24);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1056, 536);
-            this.tabPage6.TabIndex = 7;
-            this.tabPage6.Text = "设置";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // mainStatusStrip
-            // 
-            this.mainStatusStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelLogin,
-            this.toolStripProgressBarRequest});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 0);
-            this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(1064, 22);
-            this.mainStatusStrip.TabIndex = 1;
-            this.mainStatusStrip.Text = "状态栏";
-            // 
-            // toolStripStatusLabelLogin
-            // 
-            this.toolStripStatusLabelLogin.ForeColor = System.Drawing.Color.Red;
-            this.toolStripStatusLabelLogin.Name = "toolStripStatusLabelLogin";
-            this.toolStripStatusLabelLogin.Size = new System.Drawing.Size(44, 17);
-            this.toolStripStatusLabelLogin.Text = "未登录";
-            // 
-            // toolStripProgressBarRequest
-            // 
-            this.toolStripProgressBarRequest.Margin = new System.Windows.Forms.Padding(20, 3, 1, 3);
-            this.toolStripProgressBarRequest.Name = "toolStripProgressBarRequest";
-            this.toolStripProgressBarRequest.Size = new System.Drawing.Size(100, 16);
-            this.toolStripProgressBarRequest.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.toolStripProgressBarRequest.Tag = "初始化";
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.BottomToolStripPanel
-            // 
-            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.mainStatusStrip);
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.AutoScroll = true;
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.mainTabControl);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1064, 564);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.LeftToolStripPanelVisible = false;
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 25);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.RightToolStripPanelVisible = false;
-            this.toolStripContainer1.Size = new System.Drawing.Size(1064, 586);
-            this.toolStripContainer1.TabIndex = 2;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            this.toolStripContainer1.TopToolStripPanelVisible = false;
             // 
             // timerChart
             // 
             this.timerChart.Enabled = true;
             this.timerChart.Interval = 500;
-            this.timerChart.Tick += new System.EventHandler(this.timerChart_Tick);
             // 
             // timerAction
             // 
@@ -830,55 +742,102 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuMineToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuMineToolStripMenuItem,
+            this.设置ToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1064, 25);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // menuMineToolStripMenuItem
             // 
             this.menuMineToolStripMenuItem.Image = global::ForWinQuant.Properties.Resources.用户;
             this.menuMineToolStripMenuItem.Name = "menuMineToolStripMenuItem";
-            this.menuMineToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.menuMineToolStripMenuItem.Text = "我的";
+            resources.ApplyResources(this.menuMineToolStripMenuItem, "menuMineToolStripMenuItem");
+            // 
+            // 设置ToolStripMenuItem
+            // 
+            this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SynchronizeAdvancedSettingsMenuItem});
+            this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
+            resources.ApplyResources(this.设置ToolStripMenuItem, "设置ToolStripMenuItem");
+            // 
+            // SynchronizeAdvancedSettingsMenuItem
+            // 
+            this.SynchronizeAdvancedSettingsMenuItem.Name = "SynchronizeAdvancedSettingsMenuItem";
+            resources.ApplyResources(this.SynchronizeAdvancedSettingsMenuItem, "SynchronizeAdvancedSettingsMenuItem");
+            // 
+            // BottomToolStripPanel
+            // 
+            resources.ApplyResources(this.BottomToolStripPanel, "BottomToolStripPanel");
+            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
+            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            resources.ApplyResources(this.TopToolStripPanel, "TopToolStripPanel");
+            this.TopToolStripPanel.Name = "TopToolStripPanel";
+            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            // 
+            // RightToolStripPanel
+            // 
+            resources.ApplyResources(this.RightToolStripPanel, "RightToolStripPanel");
+            this.RightToolStripPanel.Name = "RightToolStripPanel";
+            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            // 
+            // LeftToolStripPanel
+            // 
+            resources.ApplyResources(this.LeftToolStripPanel, "LeftToolStripPanel");
+            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
+            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            // 
+            // ContentPanel
+            // 
+            resources.ApplyResources(this.ContentPanel, "ContentPanel");
+            // 
+            // notifyIcon1
+            // 
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 611);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1080, 650);
             this.Name = "MainForm";
-            this.Text = "ForWinQuant";
-            this.mainTabControl.ResumeLayout(false);
-            this.tabPageMine.ResumeLayout(false);
-            this.splitContainerMine.Panel1.ResumeLayout(false);
-            this.splitContainerMine.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).EndInit();
-            this.splitContainerMine.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            this.groupBoxAction.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.mainStatusStrip.ResumeLayout(false);
-            this.mainStatusStrip.PerformLayout();
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            this.mainStatusStrip.ResumeLayout(false);
+            this.mainStatusStrip.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainerMine.Panel1.ResumeLayout(false);
+            this.splitContainerMine.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMine)).EndInit();
+            this.splitContainerMine.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBoxExecutionLog.ResumeLayout(false);
+            this.groupBoxDelegateList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUserOrder)).EndInit();
+            this.groupBoxAdvancedSettings.ResumeLayout(false);
+            this.groupBoxAdvancedSettings.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRetainedAmount)).EndInit();
+            this.groupBoxAction.ResumeLayout(false);
+            this.panelAction.ResumeLayout(false);
+            this.panelAction.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -887,20 +846,29 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl mainTabControl;
-        private System.Windows.Forms.TabPage tabPageMine;
-        private System.Windows.Forms.TabPage tabPagePrice;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Timer timerChart;
+        private System.Windows.Forms.Timer timerAction;
+        private System.Windows.Forms.Timer timerInit;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuMineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
         private System.Windows.Forms.StatusStrip mainStatusStrip;
-        private System.Windows.Forms.SplitContainer splitContainerMine;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarRequest;
+        private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
+        private System.Windows.Forms.ToolStripContentPanel ContentPanel;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainerMine;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBoxAction;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAction;
+        private System.Windows.Forms.Label label_NGRC_value;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label_USDT_value;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelCountTradeToday;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelTodayRound;
@@ -911,24 +879,38 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelUserName;
-        private System.Windows.Forms.Button buttonMine;
-        private System.Windows.Forms.Label label_NGRC_value;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label_USDT_value;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Timer timerChart;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
+        private System.Windows.Forms.GroupBox groupBoxExecutionLog;
+        private System.Windows.Forms.GroupBox groupBoxDelegateList;
+        private System.Windows.Forms.GroupBox groupBoxAdvancedSettings;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dataGridViewUserOrder;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-        private System.Windows.Forms.Timer timerAction;
-        private System.Windows.Forms.Timer timerInit;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarRequest;
+        private System.Windows.Forms.CheckBox checkBoxOfflinePrompt;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dateTimePickerLateHighPriceStart;
+        private System.Windows.Forms.CheckBox checkBoxTwoHigherPrices;
+        private System.Windows.Forms.CheckBox checkBoxEarlyHighPrice;
+        private System.Windows.Forms.CheckBox checkBoxLateHighPrice;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTwoHigherPriceStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEarlyHighPriceStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerLateHighPriceEnd;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEarlyHighPriceEnd;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTwoHigherPriceEnd;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxDealPrompt;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelAssetUpdateTime;
+        private System.Windows.Forms.NumericUpDown numericUpDownRetainedAmount;
+        public System.Windows.Forms.TreeView treeViewSubUsers;
+        private System.Windows.Forms.RichTextBox textBoxLog;
+        public System.Windows.Forms.DataGridView dataGridViewUserOrder;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStatus;
+        public System.Windows.Forms.Button buttonMine;
+        private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SynchronizeAdvancedSettingsMenuItem;
+        private System.Windows.Forms.LinkLabel SynchronizeAdvancedSettings;
         private System.Windows.Forms.DataGridViewButtonColumn orderRevert;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderId;
@@ -954,8 +936,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastModifiedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn version;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuMineToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

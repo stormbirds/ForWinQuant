@@ -17,7 +17,7 @@ namespace ForWinQuant
         /// <returns></returns>
         [Headers("Content-Type:application/json;charset=utf8")]
         [Get("/user-balances")]
-        Task<Restful<List<UserBalances>>> GetUserBalances();
+        Task<Restful<List<UserBalances>>> GetUserBalances(string api_id, string secret_key);
 
     }
 

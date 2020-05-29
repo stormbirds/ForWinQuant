@@ -31,7 +31,7 @@ namespace ForWinQuant
         /// <param name="timestamp"></param>
         /// <returns></returns>
         [Get("/server-time")]
-        Task<Restful<JObject>> GetServerTime();
+        Task<Restful<JObject>> GetServerTime(string api_id,string secret_key);
 
         /// <summary>
         /// 查询可用币种
@@ -39,7 +39,7 @@ namespace ForWinQuant
         /// <param name="api_id"></param>
         /// <returns></returns>
         [Get("/coins")]
-        Task<Restful<JObject>> GetCoins();
+        Task<Restful<JObject>> GetCoins(string api_id, string secret_key);
 
         /// <summary>
         /// 查询可用交易对
@@ -47,7 +47,7 @@ namespace ForWinQuant
         /// <param name="api_id"></param>
         /// <returns></returns>
         [Get("/pairs")]
-        Task<Restful<JObject>> GetPairs();
+        Task<Restful<JObject>> GetPairs(string api_id, string secret_key);
 
 
     }
