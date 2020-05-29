@@ -18,13 +18,15 @@ namespace ForWinQuant
 {
     public partial class LoginForm : Form
     {
-        //MainForm mainForm = null;
-
 
         public LoginForm()
         {
-            //this.mainForm = fm;
             InitializeComponent();
+            this.notifyIcon1.BalloonTipClosed += (sender, e) => {
+                var thisIcon = (NotifyIcon)sender;
+                thisIcon.Visible = false;
+                thisIcon.Dispose();
+            };
             checkBoxFixedPassword.CheckedChanged += CheckBoxFixedPassword_CheckedChanged;
             button_login.Text = "版本检测中";
             this.button_login.Enabled = false;
@@ -47,9 +49,14 @@ namespace ForWinQuant
                 var api = HttpRestfulService.ForBaseApi<IUpdateApi>();
                 var newVersion = await api.GetNewVision();
                 
-                Version nowVersion = Assembly.GetExecutingAssembly().GetName().Version;
+                Version nowVersion = new Version( Application.ProductVersion);
                 Version findVersion = new Version(newVersion["ForWinQuant"]["LatestVerison"].ToString());
-                if (nowVersion < findVersion && MessageBox.Show(newVersion["ForWinQuant"]["ReleaseNote"].ToString(), "检查到新版本", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                string versionInfo = string.Format("检测到新版本！是否下载？\n版本号：{0} \n更新时间：{1}\n更新说明：{2}", 
+                    newVersion["ForWinQuant"]["LatestVerison"].ToString(), 
+                    newVersion["ForWinQuant"]["UpdateTime"].ToString(), 
+                    newVersion["ForWinQuant"]["ReleaseNote"].ToString());
+                if (nowVersion < findVersion && MessageBox.Show(versionInfo, "新版本提醒", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     string url = newVersion["ForWinQuant"]["Url"].ToString();
                     SaveFileDialog sfd = new SaveFileDialog();
@@ -165,6 +172,8 @@ namespace ForWinQuant
         {
             if (this.DialogResult != DialogResult.Cancel && this.DialogResult != DialogResult.OK)
                 e.Cancel = true;
+            
         }
+
     }
 }

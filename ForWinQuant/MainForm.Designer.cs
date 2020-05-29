@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
@@ -297,9 +297,9 @@
             // 
             // orderRevert
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "撤单";
-            this.orderRevert.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = "撤单";
+            this.orderRevert.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.orderRevert, "orderRevert");
             this.orderRevert.Name = "orderRevert";
             this.orderRevert.Text = "撤单";
@@ -731,6 +731,7 @@
             // 
             // timerAction
             // 
+            this.timerAction.Enabled = true;
             this.timerAction.Interval = 60000;
             this.timerAction.Tick += new System.EventHandler(this.timerAction_Tick);
             // 

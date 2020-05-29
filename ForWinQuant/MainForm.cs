@@ -62,9 +62,17 @@ namespace ForWinQuant
         delegate void SetTextCallback(string value , string uiName);
         public MainForm(string user,string accessToken)
         {
+
             this.currentUser = user;
             HttpRestfulService.Access_Token = accessToken;
             InitializeComponent();
+            this.notifyIcon1.BalloonTipClosed += (sender, e) => {
+                var thisIcon = (NotifyIcon)sender;
+                thisIcon.Visible = false;
+                thisIcon.Dispose();
+            };
+
+            this.Text = Application.ProductName + " " + Application.ProductVersion;
 
             this.buttonMine.TextChanged += ButtonMine_TextChanged;
             this.treeViewSubUsers.AfterSelect += TreeViewSubUsers_AfterSelect;
@@ -337,7 +345,7 @@ namespace ForWinQuant
             else if(buttonMine.Text == "停止刷单")
             {
                 usersActionStates[this.treeViewSubUsers.SelectedNode.Name] = ActivityStatus.IsStop;
-                timerAction.Enabled = false;
+                
                 buttonMine.Text = Properties.Resources.StartAction;
                 Log.Info("用户 {0} 停止了自动刷单", this.treeViewSubUsers.SelectedNode.Name);
             }
@@ -827,5 +835,7 @@ namespace ForWinQuant
                     break;
             }
         }
+
+        
     }
 }

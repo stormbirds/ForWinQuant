@@ -17,8 +17,14 @@ namespace ForWinQuant
         private string filename;
         public UpdateForm(string url,string path)
         {
+
             filename = path;
             InitializeComponent();
+            this.notifyIcon1.BalloonTipClosed += (sender, e) => {
+                var thisIcon = (NotifyIcon)sender;
+                thisIcon.Visible = false;
+                thisIcon.Dispose();
+            };
             download(url, path);
         }
 
