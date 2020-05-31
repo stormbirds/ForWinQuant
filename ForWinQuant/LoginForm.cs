@@ -47,18 +47,22 @@ namespace ForWinQuant
             try
             {
                 var api = HttpRestfulService.ForBaseApi<IUpdateApi>();
-                var newVersion = await api.GetNewVision();
-                
+                var newVersions = await api.GetNewVision();
+
+                var newVersion = newVersions.data.Last();
                 Version nowVersion = new Version( Application.ProductVersion);
-                Version findVersion = new Version(newVersion["ForWinQuant"]["LatestVerison"].ToString());
-                string versionInfo = string.Format("检测到新版本！是否下载？\n版本号：{0} \n更新时间：{1}\n更新说明：{2}", 
-                    newVersion["ForWinQuant"]["LatestVerison"].ToString(), 
-                    newVersion["ForWinQuant"]["UpdateTime"].ToString(), 
-                    newVersion["ForWinQuant"]["ReleaseNote"].ToString());
+                Version findVersion = new Version(newVersion.version_code);
+                string versionInfo = string.Format("检测到新版本！是否下载？\n" +
+                    "版本号：{0} \n" +
+                    "更新时间：{1}\n" +
+                    "更新说明：\n{2}", 
+                    newVersion.version_code, 
+                    newVersion.created_time.ToString("yyyy-MM-dd HH:mm:ss"), 
+                    newVersion.release_note);
                 if (nowVersion < findVersion && MessageBox.Show(versionInfo, "新版本提醒", 
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string url = newVersion["ForWinQuant"]["Url"].ToString();
+                    string url = HttpRestfulService.TestServerUrl+"/"+ newVersion.url;
                     SaveFileDialog sfd = new SaveFileDialog();
                     sfd.Title = "保存文件";
                     sfd.Filter = "应用程序(*.exe)|*.exe";

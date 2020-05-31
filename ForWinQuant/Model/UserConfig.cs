@@ -198,25 +198,51 @@ namespace ForWinQuant.Model
                     (MAX_TRADE_COUNT - countTradeToday) : (balancesNGRC.amounts - balancesNGRC.frozen);
                 PostOrder order = new PostOrder { pairSymbol = "7xjyKr", price = this.currentPrice, 
                     quantity = (float)Math.Floor(ask_quantity * 10000) / 10000 };
-                var askResult = await EunexHelper.CreateOrder(this.api_key, this.api_secret, "asks", order);
-                if (askResult.code == 0)
+                try
                 {
-                    Log.Info("订单(卖出、数量：{0:F4})创建成功，正在请求资产数据更新", ask_quantity);
-                    needUpdateAssets = true;
+                    var askResult = await EunexHelper.CreateOrder(this.api_key, this.api_secret, "asks", order);
+                    if (askResult.code == 0)
+                    {
+                        Log.Info("订单(卖出、数量：{0:F4})创建成功，正在请求资产数据更新", ask_quantity);
+                        needUpdateAssets = true;
+                    }
+                }
+                catch(Exception e)
+                {
+                    Log.Error("订单卖出出错，原因：{0}", e.Message);
+                }
+                finally
+                {
+
                 }
             }
 
             if (balancesUSDT.amounts > balancesUSDT.frozen) {
                 var bid_quantity = (balancesUSDT.amounts - balancesUSDT.frozen) / this.currentPrice > (MAX_TRADE_COUNT - countTradeToday) ? 
                     (MAX_TRADE_COUNT - countTradeToday) : ((balancesUSDT.amounts - balancesUSDT.frozen) / this.currentPrice);
-                var bidResult = await EunexHelper.CreateOrder(this.api_key, this.api_secret, "bids", 
-                    new PostOrder { pairSymbol = "7xjyKr", price = this.currentPrice, 
-                        quantity = (float)Math.Floor(bid_quantity * 10000) / 10000 });
-                if (bidResult.code == 0)
+                try
                 {
-                    countTradeToday += bid_quantity;
-                    Log.Info("订单(买入、数量：{0:F4})创建成功，正在请求资产数据更新", bid_quantity);
-                    needUpdateAssets = true;                   
+                    var bidResult = await EunexHelper.CreateOrder(this.api_key, this.api_secret, "bids",
+                        new PostOrder
+                        {
+                            pairSymbol = "7xjyKr",
+                            price = this.currentPrice,
+                            quantity = (float)Math.Floor(bid_quantity * 10000) / 10000
+                        });
+                    if (bidResult.code == 0)
+                    {
+                        countTradeToday += bid_quantity;
+                        Log.Info("订单(买入、数量：{0:F4})创建成功，正在请求资产数据更新", bid_quantity);
+                        needUpdateAssets = true;
+                    }
+                }
+                catch(Exception e)
+                {
+                    Log.Error("订单买入出错，原因：{0}", e.Message);
+                }
+                finally
+                {
+
                 }
             }
 

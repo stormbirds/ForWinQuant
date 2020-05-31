@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using ForWinQuant.Model;
+using Newtonsoft.Json.Linq;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace ForWinQuant.Restful
 {
     public interface IUpdateApi
     {
-        [Get("/software_update.json")]
-        Task<JObject> GetNewVision();
+        [Get("/getVersions")]
+        Task<Restful<List<AppVersion>>> GetNewVision();
     }
 }

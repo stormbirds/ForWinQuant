@@ -39,7 +39,7 @@ namespace ForWinQuant
         const string MarketEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/market";
         const string MembersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/members";
         const string OrdersEunexUrl = "https://api6c9jg3nfw1s1js.eunex.co/v2/orders";
-        const string TestServerUrl = "http://111.229.228.244:8000";
+        public const string TestServerUrl = "http://111.229.228.244:8000";
         const string StormBirdsUrl = "https://tool.stormbirds.cn";
         //public static string API_KEY = "KqtRQAwWjlqEnS8v";
         //public static string API_SECRET = "07OojLSkmAGdiPwm";
@@ -90,7 +90,7 @@ namespace ForWinQuant
                           ContentSerializer = new NewtonsoftJsonContentSerializer(jsonSettings)
                       });
                 case "IUpdateApi":
-                    base_url = StormBirdsUrl;
+                    base_url = TestServerUrl;
                     return RestService.For<T>(
                       new HttpClient(new UserHttpClientHandler())
                       {
