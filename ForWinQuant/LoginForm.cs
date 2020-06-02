@@ -179,5 +179,9 @@ namespace ForWinQuant
             
         }
 
+        private void button_register_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
